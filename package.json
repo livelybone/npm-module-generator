@@ -1,0 +1,44 @@
+{
+  "name": "@livelybone/npm-module-generator",
+  "version": "0.0.1",
+  "description": "A plugins for generating a framework of npm module，include directories and dependencies",
+  "main": "index.js",
+  "bin": {
+    "init": "./src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livelybone/-livelybone-npm-module-generator.git"
+  },
+  "keywords": [
+    "npm",
+    "module",
+    "generator",
+    "framework",
+    "dependencies",
+    "directires",
+    "custom"
+  ],
+  "author": "livelybone (2631541504@qq.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/livelybone/-livelybone-npm-module-generator/issues"
+  },
+  "homepage": "https://github.com/livelybone/-livelybone-npm-module-generator#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}

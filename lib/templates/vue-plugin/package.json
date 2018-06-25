@@ -1,0 +1,25 @@
+{
+  "name": "{{projectName}}",
+  "version": "0.0.1",
+  "description": "{{desciption}}",
+  "main": "./lib/index.js",
+  "bin": {
+    "{{bin}}": "./lib/index.js"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/webpack  --progress --mode production",
+    "eslint": "./node_modules/.bin/eslint ./src/index.vue",
+    "test": "cross-env BABEL_ENV=test karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "{{repository}}"
+  },
+  "keywords": "{{keywords}}",
+  "author": "{{author}}",
+  "license": "MIT",
+  "bugs": {
+    "url": "{{bugsUrl}}"
+  },
+  "homepage": "{{homepage}}"
+}
