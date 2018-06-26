@@ -3,4 +3,4 @@
 **/*.spec.js
 **/*.test.js
 **/*.e2e.js
-**/webpack.*.js
+**/webpack.**.js
