@@ -1,10 +1,10 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A plugins for generating a framework of npm module，include directories and dependencies",
   "main": "index.js",
   "bin": {
-    "module-generate": "bin/module-generate.js"
+    "module-generate": "./bin/module-generate.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "{{desciption}}",
   "main": "./lib/index.js",
-  "bin": {
-    "{{bin}}": "./lib/index.js"
-  },
   "scripts": {
     "build": "./node_modules/.bin/webpack  --progress --mode production",
     "eslint": "./node_modules/.bin/eslint ./src/index.vue",
