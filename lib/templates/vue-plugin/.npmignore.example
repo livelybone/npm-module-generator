@@ -21,3 +21,4 @@ test/
 coverage/
 /karma.conf.js
 /.eslintrc.js
+/.eslintignore
