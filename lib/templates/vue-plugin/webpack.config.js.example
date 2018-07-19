@@ -10,7 +10,7 @@ function getEntries() {
 
 const config = {
   mode: 'production',
-  entry: { index: './src/index.vue' },
+  entry: { index: ['babel-polyfill', './src/index.vue'] },
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: './[name].js',
