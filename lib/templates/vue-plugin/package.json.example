@@ -18,5 +18,5 @@
   "bugs": {
     "url": "{{bugsUrl}}"
   },
-  "homepage": "{{homepage}}",
+  "homepage": "{{homepage}}"
 }
