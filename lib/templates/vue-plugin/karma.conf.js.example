@@ -8,7 +8,7 @@ module.exports = (config) => {
     frameworks: ['mocha', 'chai'],
     // 需要测试的文件，在 browsers 里面运行，使用 frameworks 测试js，通过 reporters 输出报告
     files: [
-      '/test/**/*.spec.js',
+      'test/**/*.spec.js',
     ],
     // 为入口文件制定预处理器，测试 js 之前用 webpack 和 sourcemap 处理一下
     preprocessors: {
