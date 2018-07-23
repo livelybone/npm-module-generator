@@ -1,16 +1,17 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require('path');
+const fs = require('fs');
 
 function getEntries() {
   const reg = /\.vue$/;
-  return require('fs').readdirSync(path.resolve(__dirname, './src/component'))
+  return fs.readdirSync(path.resolve(__dirname, './src/component'))
     .filter(filename => reg.test(filename) && !fs.statSync(path.resolve(__dirname, './src/component', filename)).isDirectory())
     .map(filename => ({ [filename.replace(reg, '')]: path.resolve(__dirname, './src/component', filename) }));
 }
 
 const config = {
   mode: 'production',
-  entry: { index: ['babel-polyfill', './src/index.vue'] },
+  entry: { index: ['./src/Index.vue'] },
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: './[name].js',
