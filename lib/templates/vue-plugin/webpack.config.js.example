@@ -12,7 +12,7 @@ function getEntries() {
 
 const config = {
   mode: 'production',
-  entry: { index: './src/Index.vue' },
+  entry: { index: './src/components/Index.vue' },
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: './[name].js',
