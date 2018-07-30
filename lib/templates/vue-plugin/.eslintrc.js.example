@@ -5,7 +5,7 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  'extends': ['plugin:vue/essential', 'airbnb-base']
+  'extends': ['plugin:vue/essential', 'airbnb-base'],
   rules: {
     // allow debugger during development
     'quote-props': [2, 'consistent'],
