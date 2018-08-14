@@ -16,7 +16,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: './[name].js',
-    library: 'VueSnackbar',
+    library: 'VueComponent',
     libraryTarget: 'umd',
     globalObject: 'this',
   },
