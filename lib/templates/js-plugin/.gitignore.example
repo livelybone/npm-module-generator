@@ -13,13 +13,5 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-webpack.*.js
-/src/
-/index.js
-
-examples/
-test/
-coverage/
-/karma.conf.js
-/.eslintrc.js
-/.eslintignore
+/coverage/
+/lib/

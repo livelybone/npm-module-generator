@@ -1,0 +1,28 @@
+{
+  "name": "{{projectName}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack  --progress --mode production",
+    "eslint": "./node_modules/.bin/eslint ./src",
+    "test": "./node_modules/.bin/mocha ./test/index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "{{repository}}"
+  },
+  "keywords": "{{keywords}}",
+  "author": "{{author}}",
+  "license": "MIT",
+  "bugs": {
+    "url": "{{bugsUrl}}"
+  },
+  "homepage": "{{homepage}}",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0",
+    "webpack": "^4.16.2",
+    "webpack-command": "^0.4.1"
+  }
+}
