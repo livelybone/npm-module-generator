@@ -5,5 +5,6 @@ module.exports = {
     'quote-props': 'off',
     'no-console': 'off',
     'linebreak-style': 'off',
-  }
-};
+    'semi': 'off',
+  },
+}
