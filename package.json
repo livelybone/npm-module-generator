@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/livelybone/-livelybone-npm-module-generator.git"
+    "url": "git+https://github.com/livelybone/npm-module-generator.git"
   },
   "keywords": [
     "npm",
@@ -27,9 +27,9 @@
   "author": "livelybone (2631541504@qq.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/livelybone/-livelybone-npm-module-generator/issues"
+    "url": "https://github.com/livelybone/npm-module-generator/issues"
   },
-  "homepage": "https://github.com/livelybone/-livelybone-npm-module-generator#readme",
+  "homepage": "https://github.com/livelybone/npm-module-generator#readme",
   "engines": {
     "node": ">=8.0.0"
   },
