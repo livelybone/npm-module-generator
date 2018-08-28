@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "A plugins for generating a framework of npm module, include directories and dependencies",
   "main": "index.js",
   "bin": {
