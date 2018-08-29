@@ -6,7 +6,7 @@ function getEntries() {
   return fs.readdirSync(path.resolve(__dirname, './src/components'))
     .filter(filename => reg.test(filename) && !fs.statSync(path.resolve(__dirname, './src/components', filename)).isDirectory())
     .map(filename => ({
-      name: [filename.replace(reg, '')],
+      name: filename.replace(reg, ''),
       filename: path.resolve(__dirname, './src/components', filename),
     }))
 }
