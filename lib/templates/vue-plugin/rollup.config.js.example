@@ -19,7 +19,7 @@ function getEntries() {
     }))
 }
 
-fs.copyFileSync('./src/css/index.scss', './lib/css/index.css')
+fs.copyFileSync('./src/css/index.scss', './lib/css/index.scss')
 
 const conf = entry => ({
   input: './src/components/Index.vue',
