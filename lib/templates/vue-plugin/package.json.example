@@ -2,9 +2,9 @@
   "name": "{{projectName}}",
   "version": "1.0.0",
   "description": "{{description}}",
-  "main": "./lib/index.umd.js",
-  "module": "./lib/index.es.js",
-  "unpkg": "./lib/index.umd.js",
+  "main": "./lib/umd/index.js",
+  "module": "./lib/es/index.js",
+  "unpkg": "./lib/umd/index.js",
   "scripts": {
     "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
     "build:css": "rimraf ./lib/css && node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",

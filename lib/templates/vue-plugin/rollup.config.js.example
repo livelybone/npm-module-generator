@@ -24,7 +24,7 @@ fs.copyFileSync('./src/css/index.scss', './lib/css/index.css')
 const conf = entry => ({
   input: './src/components/Index.vue',
   output: entry.formats.map(format => ({
-    file: `./lib/index.${format}.js`,
+    file: `./lib/${format}/${entry.name}.js`,
     format,
     name: entry.name === 'index' ? 'VueComponent' : entry.name,
   })),
@@ -52,4 +52,4 @@ const conf = entry => ({
 export default [
   { name: 'index', filename: './src/components/Index.vue', format: ['es'], needUglify: false },
   ...getEntries(),
-].map(entry => conf(entry))
+].map(conf)
