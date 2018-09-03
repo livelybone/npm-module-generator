@@ -2,7 +2,9 @@
   "name": "{{projectName}}",
   "version": "1.0.0",
   "description": "{{description}}",
-  "main": "./lib/index.js",
+  "main": "./lib/index.umd.js",
+  "module": "./lib/index.es.js",
+  "unpkg": "./lib/index.umd.js",
   "scripts": {
     "build": "rimraf ./lib && rollup -c",
     "eslint": "./node_modules/.bin/eslint ./src",
