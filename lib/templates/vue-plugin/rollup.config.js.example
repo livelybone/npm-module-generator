@@ -1,0 +1,55 @@
+/* For build */
+import fs from 'fs'
+import babel from 'rollup-plugin-babel'
+import commonjs from 'rollup-plugin-commonjs'
+import resolve from 'rollup-plugin-node-resolve'
+import { uglify } from 'rollup-plugin-uglify'
+import vue from 'rollup-plugin-vue'
+
+const formats = ['es', 'umd']
+
+function getEntries() {
+  const reg = /\.vue$/
+  return fs.readdirSync(path.resolve(__dirname, './src'))
+    .filter(filename => reg.test(filename) && !fs.statSync(path.resolve(__dirname, './src', filename)).isDirectory())
+    .map(filename => ({
+      name: filename.replace(reg, ''),
+      filename: path.resolve(__dirname, './src', filename),
+      formats: formats.filter(f => f !== 'es')
+    }))
+}
+
+fs.copyFileSync('./src/css/index.scss', './lib/css/index.css')
+
+const conf = entry => ({
+  input: './src/components/Index.vue',
+  output: entry.formats.map(format => ({
+    file: `./lib/index.${format}.js`,
+    format,
+    name: entry.name === 'index' ? 'VueComponent' : entry.name,
+  })),
+  external: [],
+  plugins: [
+    resolve(),
+    commonjs(),
+    vue({ css: true }),
+    babel({
+      babelrc: false,
+      runtimeHelpers: true,
+      externalHelpers: false,
+      presets: [
+        ['env', { modules: false }],
+        'stage-2',
+      ],
+      plugins: [
+        'external-helpers',
+      ],
+    }),
+    (entry.needUglify !== false && uglify()),
+  ],
+})
+
+export default [
+  { name: 'index', filename: './src/components/Index.vue', format: ['es'], needUglify: false },
+  ...getEntries(),
+].map(entry => conf(entry))
