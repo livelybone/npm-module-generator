@@ -13,7 +13,7 @@ function getEntries() {
     .map(filename => ({
       name: filename.replace(reg, ''),
       filename: path.resolve(__dirname, './src', filename),
-      formats: formats.filter(f => f !== 'es')
+      formats: formats.filter(f => f !== 'es'),
     }))
 }
 
