@@ -29,11 +29,7 @@ const conf = entry => Object.assign({}, baseConf, {
     name: entry.name === 'index' ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
   })),
   external: [],
-  plugins: Object.assign(
-    [],
-    baseConf.plugins,
-    [(entry.needUglify !== false && uglify())],
-  ),
+  plugins: baseConf.plugins.concat([(entry.needUglify !== false && uglify())]),
 })
 
 export default [
