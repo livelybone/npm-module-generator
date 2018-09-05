@@ -5,11 +5,13 @@
   "main": "./lib/umd/index.js",
   "module": "./lib/es/index.js",
   "unpkg": "./lib/umd/index.js",
+  "css_path": "./lib/css/index.css",
+  "scss_path": "./lib/css/index.scss",
   "scripts": {
     "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
-    "build:css": "rimraf ./lib/css && node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
+    "build:css": "node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
     "build": "rimraf ./lib && npm run build:css && rollup -c",
-    "eslint": "./node_modules/.bin/eslint ./src/index.vue",
+    "eslint": "eslint ./src/index.vue",
     "test": "cross-env BABEL_ENV=test karma start --single-run"
   },
   "repository": {

@@ -22,7 +22,7 @@ const conf = entry => ({
   output: entry.formats.map(format => ({
     file: `./lib/${format}/${entry.name}.js`,
     format,
-    name: 'index' === entry.name ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
+    name: 'index' === entry.name ? 'ModuleName' : `${entry.name}{{ModuleName}}`,
   })),
   plugins: [
     resolve(),

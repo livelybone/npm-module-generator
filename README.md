@@ -23,5 +23,5 @@ module-generator [projectName] [--template] [cmd]
 |Argument|Default|Description|
 |--------|-------|-----------|
 |`projectName`|none|Optional. ProjectName, dirname|
-|`template`|`--js-plugin`|Optional. Chose template, options: `['--vue-plugin', '--js-plugin']`|
+|`template`|`js-plugin`|Optional. Chose template, options: `['vue-plugin', 'js-plugin']`|
 |`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
