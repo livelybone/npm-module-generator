@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Title</title>
-  <script src="../lib/index.js"></script>
+  <title>{{ModuleName}}</title>
+  <script src="../lib/umd/index.js"></script>
 </head>
 <body>
 <div id="module"></div>

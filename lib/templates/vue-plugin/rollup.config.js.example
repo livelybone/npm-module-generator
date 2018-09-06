@@ -33,6 +33,7 @@ const conf = entry => Object.assign({}, baseConf, {
 })
 
 export default [
-  { name: 'index', filename: './src/components/Index.vue', formats: ['es'], needUglify: false },
+  { name: 'index', filename: './src/index.js', formats: ['es'], needUglify: false },
+  { name: 'index', filename: './src/index.js', formats: ['umd'] },
   ...getEntries(),
 ].map(conf)
