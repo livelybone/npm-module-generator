@@ -24,6 +24,7 @@ const conf = entry => ({
     format,
     name: 'index' === entry.name ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
   })),
+  external: entry.external ? [''] : [],
   plugins: [
     resolve(),
     commonjs(),
@@ -32,6 +33,6 @@ const conf = entry => ({
 })
 
 export default [
-  { name: 'index', filename: './src/index.js', formats: ['es'], needUglify: false },
+  { name: 'index', filename: './src/index.js', formats: ['es'], needUglify: false, external: true },
   ...getEntries()
 ].map(conf)
