@@ -7,4 +7,60 @@
 ## Demo
 {{homepage}}
 
-## TODO
+## Installation
+```bash
+npm i -S {{projectName}}
+```
+
+## Register
+```js
+// import all
+import ModuleName from '{{projectName}}';
+
+// Global register
+Vue.component('{{ModuleName}}', ModuleName);
+
+// Local register
+new Vue({
+  components:{ModuleName}
+})
+```
+
+Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
+```html
+<-- use what you want -->
+<script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
+```
+
+## Props
+
+### Common
+| Name                      | Type                                      | DefaultValue                                  | Description  |
+| ------------------------- | ----------------------------------------- | --------------------------------------------- | ------------ |
+| `prop`                    | `type`                                    | none                                          | Description |
+
+
+## Events
+| Name              | EmittedData           | Description                                       |
+| ----------------- | --------------------- | ------------------------------------------------- |
+| `event`           | `type`                |  |
+
+## style
+For building style, you can use the css or scss file in lib directory.
+```js
+// scss
+import 'node_modules/{{projectName}}/lib/css/index.scss'
+
+// css
+import 'node_modules/{{projectName}}/lib/css/index.css'
+```
+Or
+```scss
+// scss
+@import 'node_modules/{{projectName}}/lib/css/index.scss';
+
+// css
+@import 'node_modules/{{projectName}}/lib/css/index.css';
+```
+
+Or, you can build your custom style by copying and editing `index.scss`

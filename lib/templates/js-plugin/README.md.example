@@ -7,4 +7,18 @@
 ## Demo
 {{homepage}}
 
-## TODO
+## Installation
+```bash
+npm i -S {{projectName}}
+```
+
+## Import
+```js
+import ModuleName from '{{projectName}}';
+```
+
+Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
+```html
+<-- use what you want -->
+<script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
+```
