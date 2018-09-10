@@ -1,4 +1,7 @@
 # {{projectName}}
+![gzip with dependencies: kb](https://img.shields.io/badge/gzip--with--dependencies-kb-brightgreen.svg "gzip with dependencies: kb")
+![pkg.module](https://img.shields.io/badge/pkg.module-supported-blue.svg "pkg.module")
+
 {{description}}
 
 ## repository
