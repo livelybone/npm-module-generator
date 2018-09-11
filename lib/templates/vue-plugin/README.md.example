@@ -23,14 +23,14 @@ npm i -S {{projectName}}
 ## Register
 ```js
 // import all
-import ModuleName from '{{projectName}}';
+import {{ModuleName}} from '{{projectName}}';
 
 // Global register
-Vue.component('{{ModuleName}}', ModuleName);
+Vue.component('{{ModuleName}}', {{ModuleName}});
 
 // Local register
 new Vue({
-  components:{ModuleName}
+  components:{{ModuleName}}
 })
 ```
 

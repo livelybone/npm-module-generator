@@ -22,7 +22,7 @@ npm i -S {{projectName}}
 
 ## Import
 ```js
-import ModuleName from '{{projectName}}';
+import {{ModuleName}} from '{{projectName}}';
 ```
 
 Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
