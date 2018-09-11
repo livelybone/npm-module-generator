@@ -30,7 +30,7 @@ Vue.component('{{ModuleName}}', {{ModuleName}});
 
 // Local register
 new Vue({
-  components:{{ModuleName}}
+  components:{{{ModuleName}}}
 })
 ```
 
