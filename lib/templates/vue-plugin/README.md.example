@@ -10,10 +10,7 @@
 {{repository}}
 
 ## Demo
-{{homepage}}
-
-## Example
-See: [example]({{repository}}/blob/master/examples/test.html)
+http://{{demoHostName}}/{{projectName}}/
 
 ## Installation
 ```bash
