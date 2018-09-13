@@ -15,6 +15,9 @@
 npm i -S {{projectName}}
 ```
 
+## Global name
+`{{ModuleName}}`
+
 ## Import
 ```js
 import ModuleName from '{{projectName}}';
