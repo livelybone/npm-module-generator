@@ -2,6 +2,8 @@
 ![gzip with dependencies: kb](https://img.shields.io/badge/gzip--with--dependencies-kb-brightgreen.svg "gzip with dependencies: kb")
 ![pkg.module](https://img.shields.io/badge/pkg.module-supported-blue.svg "pkg.module")
 
+> `pkg.module supported`, which means that you can apply tree-shaking in you project
+
 {{description}}
 
 ## repository
@@ -9,6 +11,9 @@
 
 ## Demo
 {{homepage}}
+
+## Example
+See: [example]({{repository}}/blob/master/examples/test.html)
 
 ## Installation
 ```bash
@@ -21,14 +26,14 @@ npm i -S {{projectName}}
 ## Register
 ```js
 // import all
-import ModuleName from '{{projectName}}';
+import {{ModuleName}} from '{{projectName}}';
 
 // Global register
-Vue.component('{{ModuleName}}', ModuleName);
+Vue.component('{{ModuleName}}', {{ModuleName}});
 
 // Local register
 new Vue({
-  components:{ModuleName}
+  components:{{{ModuleName}}}
 })
 ```
 

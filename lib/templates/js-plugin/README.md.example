@@ -2,6 +2,8 @@
 ![gzip with dependencies: kb](https://img.shields.io/badge/gzip--with--dependencies-kb-brightgreen.svg "gzip with dependencies: kb")
 ![pkg.module](https://img.shields.io/badge/pkg.module-supported-blue.svg "pkg.module")
 
+> `pkg.module supported`, which means that you can apply tree-shaking in you project
+
 {{description}}
 
 ## repository
@@ -9,6 +11,9 @@
 
 ## Demo
 {{homepage}}
+
+## Example
+See: [example]({{repository}}/blob/master/examples/test.html)
 
 ## Installation
 ```bash
@@ -20,7 +25,7 @@ npm i -S {{projectName}}
 
 ## Import
 ```js
-import ModuleName from '{{projectName}}';
+import {{ModuleName}} from '{{projectName}}';
 ```
 
 Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
