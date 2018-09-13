@@ -10,7 +10,7 @@
   "scripts": {
     "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
     "build:css": "node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
-    "build": "rimraf ./lib && npm run build:css && rollup -c",
+    "build": "rimraf ./lib && npm run build:css && cross-env NODE_ENV=production rollup -c",
     "eslint": "eslint ./src/index.vue",
     "test": "cross-env BABEL_ENV=test karma start --single-run"
   },

@@ -6,7 +6,7 @@
   "module": "./lib/es/index.js",
   "unpkg": "./lib/umd/index.js",
   "scripts": {
-    "build": "rimraf ./lib && rollup -c",
+    "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c",
     "eslint": "eslint ./src",
     "test": "npm run build && mocha ./test/index.spec.js"
   },
