@@ -24,7 +24,7 @@ npm i -S {{projectName}}
 
 ## Usage
 ```js
-import {{ModuleName}} from '{{projectName}}';
+import * as {{ModuleName}} from '{{projectName}}';
 ```
 
 when you want to set this module as external while you are developing another module, you should import it like this:
