@@ -3,6 +3,7 @@ import path from 'path'
 import { uglify } from 'rollup-plugin-uglify'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import license from 'rollup-plugin-license'
 
 const formats = ['es', 'umd']
 
@@ -26,6 +27,11 @@ const conf = entry => ({
   })),
   external: entry.external ? [''] : [],
   plugins: [
+    license({
+      banner: {
+        file: path.join(__dirname, 'LICENSE'),
+      },
+    }),
     resolve(),
     commonjs(),
     (entry.needUglify !== false && uglify()),
