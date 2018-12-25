@@ -15,9 +15,11 @@ module.exports = {
   external: [],
   plugins: [
     license({
-      banner: {
-        file: path.join(__dirname, 'LICENSE'),
-      },
+      banner: `Bundle of <%= pkg.name %>
+               Generated: <%= moment().format('YYYY-MM-DD') %>
+               Version: <%= pkg.version %>
+               License: <%= pkg.license %>
+               Author: <%= pkg.author %>`,
     }),
     resolve(),
     commonjs(),
