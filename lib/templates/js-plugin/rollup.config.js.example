@@ -27,6 +27,9 @@ const conf = entry => ({
   })),
   external: entry.external ? [''] : [],
   plugins: [
+    resolve(),
+    commonjs(),
+    (entry.needUglify !== false && uglify()),
     license({
       banner: `Bundle of <%= pkg.name %>
                Generated: <%= moment().format('YYYY-MM-DD') %>
@@ -34,9 +37,6 @@ const conf = entry => ({
                License: <%= pkg.license %>
                Author: <%= pkg.author %>`,
     }),
-    resolve(),
-    commonjs(),
-    (entry.needUglify !== false && uglify()),
   ]
 })
 

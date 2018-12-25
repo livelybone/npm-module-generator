@@ -13,13 +13,6 @@ module.exports = {
   },
   external: [],
   plugins: [
-    license({
-      banner: `Bundle of <%= pkg.name %>
-               Generated: <%= moment().format('YYYY-MM-DD') %>
-               Version: <%= pkg.version %>
-               License: <%= pkg.license %>
-               Author: <%= pkg.author %>`,
-    }),
     resolve(),
     commonjs(),
     vue({ css: true }),
@@ -34,6 +27,13 @@ module.exports = {
       plugins: [
         'external-helpers',
       ],
+    }),
+    license({
+      banner: `Bundle of <%= pkg.name %>
+               Generated: <%= moment().format('YYYY-MM-DD') %>
+               Version: <%= pkg.version %>
+               License: <%= pkg.license %>
+               Author: <%= pkg.author %>`,
     }),
   ],
 }
