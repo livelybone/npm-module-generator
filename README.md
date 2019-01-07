@@ -1,4 +1,7 @@
 # @livelybone/npm-module-generator
+[![NPM Version](http://img.shields.io/npm/v/@livelybone/npm-module-generator.svg?style=flat-square)](https://www.npmjs.com/package/@livelybone/npm-module-generator)
+[![Download Month](http://img.shields.io/npm/dm/@livelybone/npm-module-generator.svg?style=flat-square)](https://www.npmjs.com/package/@livelybone/npm-module-generator)
+
 A plugins for generating a framework of npm module, include directories and dependencies.
 
 The module is based on template, welcome to add more templates.
