@@ -21,7 +21,6 @@ yarn-error.log*
 /karma.conf.js
 /.eslintrc.js
 /.eslintignore
-/index.js
 /webpack.*.js
 /rollup.*.js
 /package-lock.json
