@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "4.3.2",
+  "version": "4.4.0",
   "description": "A plugins for generating a framework of npm module, include directories and dependencies",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bin/module-generate.js",
-    "eslint": "./node_modules/.bin/eslint ./lib"
+    "eslint": "eslint ./lib --fix",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commit": "npx git-cz"
   },
   "repository": {
     "type": "git",
@@ -37,8 +39,16 @@
     "cross-spawn": "^6.0.5"
   },
   "devDependencies": {
+    "commitizen": "^3.0.7",
+    "conventional-changelog-cli": "^2.0.12",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "mocha": "^5.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

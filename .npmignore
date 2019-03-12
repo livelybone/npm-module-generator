@@ -1,9 +1,9 @@
 .DS_Store
 node_modules/
-/dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
 
 # Editor directories and files
 .idea
@@ -13,12 +13,15 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-/webpack.*.js
-/src/
-/index.js
-
 /test/
 /coverage/
+/src/
+/examples/
+/dist/
+
 /karma.conf.js
 /.eslintrc.js
 /.eslintignore
+/index.js
+/webpack.*.js
+/rollup.*.js
