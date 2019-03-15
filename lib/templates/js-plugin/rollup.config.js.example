@@ -4,6 +4,7 @@ import { uglify } from 'rollup-plugin-uglify'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import license from 'rollup-plugin-license'
+import packageConf from './package.json'
 
 const formats = ['es', 'umd']
 
@@ -25,7 +26,7 @@ const conf = entry => ({
     format,
     name: 'index' === entry.name ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
   })),
-  external: entry.external ? [''] : [],
+  external: entry.external ? Object.keys(packageConf.dependencies) : [],
   plugins: [
     resolve(),
     commonjs(),
