@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "4.5.0",
+  "version": "4.5.1",
   "description": "A plugins for generating a framework of npm module, include directories and dependencies",
   "main": "index.js",
   "bin": {
@@ -21,9 +21,13 @@
     "npm",
     "module",
     "generator",
-    "framewor",
+    "vue",
+    "react",
+    "component",
+    "js tool",
+    "cli",
     "dependencies",
-    "directires",
+    "directories",
     "custom"
   ],
   "author": "livelybone (2631541504@qq.com)",
