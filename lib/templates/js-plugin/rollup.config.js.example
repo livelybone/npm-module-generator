@@ -1,9 +1,10 @@
 import fs from 'fs'
 import path from 'path'
-import { uglify } from 'rollup-plugin-uglify'
-import resolve from 'rollup-plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import license from 'rollup-plugin-license'
+import resolve from 'rollup-plugin-node-resolve'
+import { uglify } from 'rollup-plugin-uglify'
 import packageConf from './package.json'
 
 const formats = ['es', 'umd']
@@ -30,6 +31,26 @@ const conf = entry => ({
   plugins: [
     resolve(),
     commonjs(),
+    babel({
+      babelrc: false,
+      runtimeHelpers: true,
+      externalHelpers: false,
+      presets: [
+        [
+          'env',
+          {
+            modules: false,
+            targets: {
+              browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
+            },
+          },
+        ],
+        'stage-2',
+      ],
+      plugins: [
+        'external-helpers',
+      ],
+    }),
     (entry.needUglify !== false && uglify()),
     license({
       banner: `Bundle of <%= pkg.name %>

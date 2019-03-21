@@ -24,3 +24,4 @@ yarn-error.log*
 /webpack.*.js
 /rollup.*.js
 /package-lock.json
+/yarn.lock
