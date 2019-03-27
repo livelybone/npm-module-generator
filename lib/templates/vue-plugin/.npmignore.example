@@ -11,12 +11,11 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-/src/
-/examples/
-/test/
 /coverage/
-/dist/
+/examples/
 /node_modules/
+/src/
+/test/
 
 /karma.conf.js
 /.eslintrc.js

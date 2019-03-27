@@ -27,7 +27,7 @@ const conf = entry => ({
     format,
     name: 'index' === entry.name ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
   })),
-  external: entry.external ? Object.keys(packageConf.dependencies) : [],
+  external: entry.external ? Object.keys(packageConf.dependencies || {}) : [],
   plugins: [
     resolve(),
     commonjs(),
