@@ -1,6 +1,8 @@
 /* For build */
 import fs from 'fs'
 import path from 'path'
+import babel from 'rollup-plugin-babel'
+import license from 'rollup-plugin-license'
 import { uglify } from 'rollup-plugin-uglify'
 import packageConf from './package.json'
 
@@ -8,13 +10,17 @@ const baseConf = require('./rollup.config.base')
 
 const formats = ['es', 'umd']
 
-fs.copyFileSync(path.resolve(__dirname, './src/css/index.scss'), path.resolve(__dirname, './lib/css/index.scss'))
+fs.copyFileSync(
+  path.resolve(__dirname, './src/css/index.scss'),
+  path.resolve(__dirname, './lib/css/index.scss'),
+)
 console.log('>> css file copy successful')
 
 function getEntries() {
   const reg = /\.vue$/
   return fs.readdirSync(path.resolve(__dirname, './src/components'))
-    .filter(filename => reg.test(filename) && !fs.statSync(path.resolve(__dirname, './src/components', filename)).isDirectory())
+    .filter(filename => reg.test(filename)
+      && !fs.statSync(path.resolve(__dirname, './src/components', filename)).isDirectory())
     .map(filename => ({
       name: filename.replace(reg, ''),
       filename: path.resolve(__dirname, './src/components', filename),
@@ -22,7 +28,8 @@ function getEntries() {
     }))
 }
 
-const conf = entry => Object.assign({}, baseConf, {
+const conf = entry => ({
+  ...baseConf,
   input: entry.filename,
   output: entry.formats.map(format => ({
     file: `./lib/${format}/${entry.name}.js`,
@@ -30,7 +37,37 @@ const conf = entry => Object.assign({}, baseConf, {
     name: entry.name === 'index' ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
   })),
   external: entry.external ? Object.keys(packageConf.dependencies || {}) : [],
-  plugins: baseConf.plugins.concat([(entry.needUglify !== false && uglify())]),
+  plugins: [
+    ...baseConf.plugins,
+    babel({
+      babelrc: false,
+      runtimeHelpers: true,
+      externalHelpers: false,
+      presets: [
+        [
+          'env',
+          {
+            modules: false,
+            targets: {
+              browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
+            },
+          },
+        ],
+        'stage-2',
+      ],
+      plugins: [
+        'external-helpers',
+      ],
+    }),
+    (entry.needUglify !== false && uglify()),
+    license({
+      banner: `Bundle of <%= pkg.name %>
+               Generated: <%= moment().format('YYYY-MM-DD') %>
+               Version: <%= pkg.version %>
+               License: <%= pkg.license %>
+               Author: <%= pkg.author %>`,
+    }),
+  ],
 })
 
 export default [

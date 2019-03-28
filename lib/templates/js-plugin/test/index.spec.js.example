@@ -1,3 +1,4 @@
+const expect = require('chai').expect
 const {{ModuleName}} = require('../lib/umd/index')
 
 describe('index', () => {

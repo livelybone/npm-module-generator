@@ -1,13 +1,9 @@
 const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
-const vuePlugin = require('rollup-plugin-vue')
-
-const vue = vuePlugin.default || vuePlugin
 
 module.exports = {
   plugins: [
     resolve(),
     commonjs(),
-    vue({ css: true }),
   ],
 }
