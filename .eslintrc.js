@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {},
-  'extends': 'airbnb-base',
+  extends: 'airbnb-base',
   rules: {
     'quote-props': 'off',
     'no-console': 'off',
