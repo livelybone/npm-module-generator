@@ -43,12 +43,12 @@
     "cross-spawn": "^6.0.5"
   },
   "devDependencies": {
-    "commitizen": "^3.0.7",
-    "conventional-changelog-cli": "^2.0.12",
+    "commitizen": "^3.1.1",
+    "conventional-changelog-cli": "^2.0.21",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "mocha": "^5.2.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "mocha": "^6.1.4"
   },
   "config": {
     "commitizen": {
