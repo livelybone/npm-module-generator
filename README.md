@@ -12,13 +12,20 @@ https://github.com/livelybone/-livelybone-npm-module-generator.git
 ## Demo
 https://github.com/livelybone/-livelybone-npm-module-generator#readme
 
-## installation
+## Use
+npx `Recommend`
+> If you've previously installed @livelybone/npm-module-generator globally via `npm install -g @livelybone/npm-module-generator`, we recommend you uninstall the package using `npm uninstall -g @livelybone/npm-module-generator` to ensure that npx always uses the latest version.
+
 ```bash
-npm i -g @livelybone/npm-module-generator
+npx @livelybone/npm-module-generator [projectName] [--template] [cmd]
 ```
 
-## Use
+npm
+> This can not ensure that the module is up to date
+
 ```bash
+npm i -g @livelybone/npm-module-generator
+
 module-generator [projectName] [--template] [cmd]
 ```
 
