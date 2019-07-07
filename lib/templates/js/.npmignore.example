@@ -17,6 +17,7 @@ yarn-error.log*
 /node_modules/
 /src/
 /test/
+/test-lib/
 
 /karma.conf.js
 /.eslintrc.js

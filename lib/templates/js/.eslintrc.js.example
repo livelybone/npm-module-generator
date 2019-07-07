@@ -5,7 +5,7 @@ module.exports = {
   'env': {
     'browser': true,
     'commonjs': true,
-    'node': true
+    'node': true,
   },
   'extends': ['eslint:recommended', 'airbnb-base'],
   'rules': {
@@ -18,5 +18,10 @@ module.exports = {
     'camelcase': 'off',
     'no-mixed-operators': 'off',
     'semi': 'off',
+    'indent': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'operator-linebreak': 'off',
+    'prettier/prettier': 'error',
   },
+  'plugins': ['prettier'],
 }

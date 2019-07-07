@@ -27,13 +27,6 @@ npm i -S {{projectName}}
 import * as {{ModuleName}} from '{{projectName}}';
 ```
 
-when you want to set this module as external while you are developing another module, you should import it like this:
-```js
-import * as {{ModuleName}}  from '{{projectName}}'
-
-// then use it by need
-```
-
 Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
 ```html
 <-- use what you want -->

@@ -1,0 +1,34 @@
+# {{projectName}}
+[![NPM Version](http://img.shields.io/npm/v/{{projectName}}.svg?style=flat-square)](https://www.npmjs.com/package/{{projectName}})
+[![Download Month](http://img.shields.io/npm/dm/{{projectName}}.svg?style=flat-square)](https://www.npmjs.com/package/{{projectName}})
+![gzip with dependencies: kb](https://img.shields.io/badge/gzip--with--dependencies-kb-brightgreen.svg "gzip with dependencies: kb")
+![pkg.module](https://img.shields.io/badge/pkg.module-supported-blue.svg "pkg.module")
+
+> `pkg.module supported`, which means that you can apply tree-shaking in you project
+
+{{description}}
+
+## repository
+{{repository}}
+
+## Demo
+{{homepage}}
+
+## Installation
+```bash
+npm i -S {{projectName}}
+```
+
+## Global name
+`{{ModuleName}}`
+
+## Usage
+```js
+import * as {{ModuleName}} from '{{projectName}}';
+```
+
+Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
+```html
+<-- use what you want -->
+<script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
+```
