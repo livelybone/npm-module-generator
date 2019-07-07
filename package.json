@@ -1,8 +1,8 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "4.6.0",
+  "version": "4.6.1",
   "description": "A plugins for generating a framework of npm module, include directories and dependencies",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "bin": {
     "module-generate": "./bin/module-generate.js"
   },
@@ -18,17 +18,16 @@
     "url": "git+https://github.com/livelybone/npm-module-generator.git"
   },
   "keywords": [
-    "npm",
     "module",
+    "library",
+    "generate",
     "generator",
     "vue",
     "react",
     "component",
     "js tool",
-    "cli",
-    "dependencies",
-    "directories",
-    "custom"
+    "typescript",
+    "cli"
   ],
   "author": "livelybone (2631541504@qq.com)",
   "license": "MIT",
