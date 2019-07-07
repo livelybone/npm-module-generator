@@ -9,9 +9,6 @@ The module is based on template, welcome to add more templates.
 ## repository
 https://github.com/livelybone/-livelybone-npm-module-generator.git
 
-## Demo
-https://github.com/livelybone/-livelybone-npm-module-generator#readme
-
 ## Use
 npx `Recommend`
 > If you've previously installed @livelybone/npm-module-generator globally via `npm install -g @livelybone/npm-module-generator`, we recommend you uninstall the package using `npm uninstall -g @livelybone/npm-module-generator` to ensure that npx always uses the latest version.
