@@ -50,7 +50,13 @@ const conf = entry => ({
 })
 
 export default [
-  { name: 'index', filename: './src/index.js', formats: ['es'], needUglify: false, external: true },
-  { name: 'index', filename: './src/index.js', formats: ['umd'] },
+  {
+    name: 'index',
+    filename: './src/index.ts',
+    formats: ['es'],
+    needUglify: false,
+    external: true,
+  },
+  { name: 'index', filename: './src/index.ts', formats: ['umd'] },
   ...getEntries(),
 ].map(conf)

@@ -4,14 +4,7 @@ const path = require('path')
 
 const config = {
   mode: 'production',
-  entry: { index: './src/components/Index.vue' },
-  output: {
-    path: path.resolve(__dirname, './lib'),
-    filename: './[name].js',
-    library: '{{ModuleName}}',
-    libraryTarget: 'umd',
-    globalObject: 'this',
-  },
+  entry: { index: './src/index.js' },
   module: {
     rules: [
       { test: /\.vue$/, exclude: /node_modules/, loader: 'vue-loader' },
@@ -22,7 +15,7 @@ const config = {
         options: {
           presets: [
             [
-              'env',
+              '@babel/preset-env',
               {
                 modules: false,
                 targets: {
@@ -30,13 +23,8 @@ const config = {
                 },
               },
             ],
-            'stage-2',
           ],
-          env: {
-            test: {
-              plugins: ['transform-runtime', 'istanbul'],
-            },
-          },
+          plugins: ['@babel/plugin-transform-runtime', 'istanbul'],
         },
       },
     ],

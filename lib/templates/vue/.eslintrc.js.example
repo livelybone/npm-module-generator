@@ -3,7 +3,8 @@ module.exports = {
     'parser': 'babel-eslint',
   },
   'plugins': [
-    'vue'
+    'vue',
+    'prettier'
   ],
   'extends': ['plugin:vue/essential', 'airbnb-base'],
   'rules': {
@@ -15,6 +16,11 @@ module.exports = {
     'object-curly-newline': 'off',
     'camelcase': 'off',
     'no-mixed-operators':'off',
-    'semi': 'off'
+    'semi': 'off',
+    'indent': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'operator-linebreak': 'off',
+    'arrow-parens': 'off',
+    'prettier/prettier': 'error',
   },
-};
+}

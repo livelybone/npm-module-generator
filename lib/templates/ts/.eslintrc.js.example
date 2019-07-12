@@ -22,6 +22,7 @@ module.exports = {
     'indent': 'off',
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
+    'arrow-parens': 'off',
     'prettier/prettier': 'error',
   },
   'plugins': ['typescript', 'prettier'],

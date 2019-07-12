@@ -1,13 +1,13 @@
 module.exports = {
+  'parser': '@typescript-eslint/parser',
   'parserOptions': {
     'parser': 'babel-eslint',
   },
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'node': true,
-  },
-  'extends': ['eslint:recommended', 'airbnb-base'],
+  'plugins': [
+    'vue',
+    'prettier'
+  ],
+  'extends': ['plugin:vue/essential', 'airbnb-base'],
   'rules': {
     'quote-props': [2, 'consistent'],
     'import/prefer-default-export': [0],
@@ -16,7 +16,7 @@ module.exports = {
     'object-shorthand': [2, 'always', { 'avoidQuotes': false }],
     'object-curly-newline': 'off',
     'camelcase': 'off',
-    'no-mixed-operators': 'off',
+    'no-mixed-operators':'off',
     'semi': 'off',
     'indent': 'off',
     'implicit-arrow-linebreak': 'off',
@@ -24,5 +24,4 @@ module.exports = {
     'arrow-parens': 'off',
     'prettier/prettier': 'error',
   },
-  'plugins': ['prettier'],
 }

@@ -13,16 +13,16 @@ yarn.lock
 *.njsproj
 *.sln
 
-
 /coverage/
 /examples/
 /node_modules/
 /src/
 /test/
-/test-lib/
+/types/
 
 /karma.conf.js
 /.eslintrc.js
 /.eslintignore
 /webpack.*.js
 /rollup.*.js
+/tsconfig.json
