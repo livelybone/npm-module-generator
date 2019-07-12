@@ -31,7 +31,7 @@ module-generator [projectName] [--template] [cmd]
 |Argument|Default|Description|
 |--------|-------|-----------|
 |`projectName`|none|Optional. ProjectName, dirname|
-|`template`|`js`|Optional. Chose template, options: `['vue', 'js']`|
+|`template`|`js`|Optional. Chose template, options: `['js', 'vue', 'ts', 'vue-ts']`|
 |`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
 
 ## Params of initializer

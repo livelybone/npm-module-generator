@@ -21,6 +21,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'operator-linebreak': 'off',
     'arrow-parens': 'off',
+    'no-confusing-arrow': 'off',
     'prettier/prettier': 'error',
   },
 }
