@@ -10,6 +10,7 @@ export default {
     commonjs(),
     typescript({
       cacheRoot: './node_modules/.rts2_cache',
+      objectHashIgnoreUnknownHack: true,
     }),
     babel({
       babelrc: false,

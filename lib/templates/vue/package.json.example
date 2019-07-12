@@ -46,7 +46,9 @@
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.1.0",
+    "husky": "^3.0.0",
     "karma": "^4.1.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -55,6 +57,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.32",
     "karma-webpack": "^4.0.2",
+    "lint-staged": "^9.2.0",
     "mocha": "^6.1.4",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
@@ -80,7 +83,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,ts,tsx}": [
+    "**/*.{js,jsx,ts,tsx,vue}": [
       "eslint --fix",
       "git update-index --again"
     ],

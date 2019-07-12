@@ -16,18 +16,19 @@ export default {
           {
             modules: false,
             targets: {
-              browsers: ['> 1%','last 2 versions','not ie <= 8'],
+              browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
             },
           },
         ],
       ],
-      plugins: process.env.NODE_ENV === 'test'
-       ? [
-          '@babel/plugin-transform-runtime',
-          '@babel/plugin-external-helpers',
-          'istanbul',
-        ]
-       : ['@babel/plugin-external-helpers'],
+      plugins:
+        process.env.NODE_ENV === 'test'
+          ? [
+              '@babel/plugin-transform-runtime',
+              '@babel/plugin-external-helpers',
+              'istanbul',
+            ]
+          : ['@babel/plugin-external-helpers'],
     }),
   ],
 }

@@ -9,7 +9,7 @@ import baseConf from './rollup.config.base'
 const formats = ['es', 'umd']
 
 function getEntries() {
-  const reg = /\.js$/
+  const reg = /\.ts$/
   return fs
     .readdirSync(path.resolve(__dirname, './src'))
     .filter(

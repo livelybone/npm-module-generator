@@ -18,6 +18,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "preserve",
+    "sourceMap": true,
     "typeRoots": [
       "./node_modules/vue/types",
       "./types"
