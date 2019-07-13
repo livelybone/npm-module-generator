@@ -36,7 +36,6 @@
     "@babel/runtime": "^7.5.1",
     "@typescript-eslint/parser": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.19",
-    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.4",
     "chai": "^4.2.0",
