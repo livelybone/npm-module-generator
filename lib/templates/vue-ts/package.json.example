@@ -12,7 +12,7 @@
     "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
     "build:css": "cross-env NODE_ENV=production node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
     "build": "rimraf ./lib && npm run build:css && cross-env NODE_ENV=production rollup -c",
-    "eslint": "eslint ./ --ext .vue,.js --fix",
+    "eslint": "eslint ./ --ext .vue,.ts, --fix",
     "test": "cross-env BABEL_ENV=test karma start --single-run",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git-cz"
