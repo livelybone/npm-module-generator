@@ -8,14 +8,16 @@ const vue = vuePlugin.default || vuePlugin
 
 module.exports = {
   plugins: [
-    resolve(),
+    resolve({
+      extensions: [...DEFAULT_EXTENSIONS, '.vue'],
+    }),
     commonjs(),
     vue({ css: true }),
     babel({
       babelrc: false,
       externalHelpers: true,
       runtimeHelpers: true,
-      extensions: [...DEFAULT_EXTENSIONS, 'vue'],
+      extensions: [...DEFAULT_EXTENSIONS, '.vue'],
       presets: [
         [
           '@babel/preset-env',
