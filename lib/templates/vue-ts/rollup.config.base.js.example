@@ -20,7 +20,7 @@ module.exports = {
       babelrc: false,
       externalHelpers: true,
       runtimeHelpers: true,
-      extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
+      extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
       presets: [
         [
           '@babel/preset-env',

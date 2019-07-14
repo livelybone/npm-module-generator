@@ -1,13 +1,13 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "5.1.1-beta",
+  "version": "5.2.0-beta0",
   "description": "A cli for generating a framework of npm module.",
   "main": "./lib/index.js",
   "bin": {
     "module-generate": "./bin/module-generate.js"
   },
   "scripts": {
-    "test": "npm start -- test --js",
+    "test": "npm start -- test",
     "start": "node ./bin/module-generate.js",
     "eslint": "eslint ./lib --fix",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
