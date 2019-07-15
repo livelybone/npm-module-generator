@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import dts from 'rollup-plugin-dts'
 import license from 'rollup-plugin-license'
 import { uglify } from 'rollup-plugin-uglify'
 import packageConf from './package.json'
@@ -14,17 +15,19 @@ fs.copyFileSync(
 console.log('>> css file copy successful')
 
 function getEntries() {
-  const reg = /\.js$/
+  const reg = /\.tsx?$/
   return fs
-    .readdirSync(path.resolve(__dirname, './src'))
+    .readdirSync(path.resolve(__dirname, './src/components'))
     .filter(
       filename =>
         reg.test(filename) &&
-        !fs.statSync(path.resolve(__dirname, './src', filename)).isDirectory(),
+        !fs
+          .statSync(path.resolve(__dirname, './src/components', filename))
+          .isDirectory(),
     )
     .map(filename => ({
       name: filename.replace(reg, ''),
-      filename: path.resolve(__dirname, './src', filename),
+      filename: path.resolve(__dirname, './src/components', filename),
       formats: formats.filter(f => f !== 'es'),
     }))
 }
@@ -58,12 +61,26 @@ const conf = entry => ({
 })
 
 export default [
+  ...[
+    {
+      name: 'index',
+      filename: './src/index.ts',
+      formats: ['es'],
+      needUglify: false,
+      external: true,
+    },
+    {
+      name: 'index',
+      filename: './src/index.ts',
+      formats: ['umd'],
+      needUglify: true,
+      external: false,
+    },
+    ...getEntries(),
+  ].map(conf),
   {
-    name: 'index',
-    filename: './src/index.ts',
-    formats: ['es'],
-    needUglify: false,
-    external: true,
+    input: './src/index.ts',
+    output: [{ file: './index.d.ts', format: 'es' }],
+    plugins: [dts()],
   },
-  ...getEntries(),
-].map(conf)
+]

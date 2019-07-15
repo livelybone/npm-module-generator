@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ModuleName}}</title>
   <script src="../lib/umd/index.js"></script>
+  <script src="../lib/css/index.css"></script>
 </head>
 <body>
 <div id="module"></div>
