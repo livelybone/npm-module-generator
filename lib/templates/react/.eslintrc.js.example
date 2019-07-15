@@ -1,12 +1,4 @@
 module.exports = {
-  'parserOptions': {
-    'parser': 'babel-eslint',
-  },
-  'env': {
-    'browser': true,
-    'commonjs': true,
-    'node': true,
-  },
   'extends': ['react-app'],
   'rules': {
     'prettier/prettier': 'error',
