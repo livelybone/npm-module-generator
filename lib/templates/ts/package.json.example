@@ -9,7 +9,7 @@
   "scripts": {
     "build": "rimraf ./lib && cross-env NODE_ENV=production rollup -c rollup.config.js",
     "build:test": "rimraf ./test-lib && cross-env NODE_ENV=test rollup -c rollup.config.test.js --sourcemap",
-    "eslint": "eslint ./ --ext .ts --fix",
+    "eslint": "eslint ./ --ext .ts,.js --fix",
     "test": "npm run build:test && cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- ./test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git-cz"
@@ -70,7 +70,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,vue}": [
+    "**/*.{js,ts}": [
       "eslint --fix",
       "git update-index --again"
     ],

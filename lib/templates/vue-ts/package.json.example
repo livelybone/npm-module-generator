@@ -87,7 +87,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,vue}": [
+    "**/*.{ts,vue}": [
       "eslint --fix",
       "git update-index --again"
     ],
