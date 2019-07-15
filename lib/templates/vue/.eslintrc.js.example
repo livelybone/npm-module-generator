@@ -6,6 +6,7 @@ module.exports = {
     'vue',
     'prettier'
   ],
+  'extends': ['plugin:vue/essential', 'airbnb-base'],
   'rules': {
     'quote-props': [2, 'consistent'],
     'import/prefer-default-export': [0],
