@@ -22,7 +22,9 @@ package-lock.json
 /karma.conf.js
 /.eslintrc.js
 /.eslintignore
-/.prettier.js
+/.prettierrc.js
+/.babelrc.js
+/.tsconfig.json
 /index.js
 /webpack.*.js
 /rollup.*.js

@@ -23,7 +23,9 @@ yarn.lock
 /karma.conf.js
 /.eslintrc.js
 /.eslintignore
-/.prettier.js
+/.prettierrc.js
+/.babelrc.js
+/.tsconfig.json
 /webpack.*.js
 /rollup.*.js
 /tsconfig.json
