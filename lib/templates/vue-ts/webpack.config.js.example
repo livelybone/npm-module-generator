@@ -1,5 +1,4 @@
 /* For test */
-// @ts-ignore
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const babelLoader = {
