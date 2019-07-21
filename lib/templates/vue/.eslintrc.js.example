@@ -6,22 +6,12 @@ module.exports = {
     'vue',
     'prettier'
   ],
-  'extends': ['plugin:vue/essential', 'airbnb-base'],
+  'extends': [
+    'airbnb-base',
+    'plugin:vue/essential',
+    'plugin:prettier/recommended',
+  ],
   'rules': {
-    'quote-props': [2, 'consistent'],
-    'import/prefer-default-export': [0],
-    'linebreak-style': 'off',
-    'global-require': 'off',
-    'object-shorthand': [2, 'always', { 'avoidQuotes': false }],
-    'object-curly-newline': 'off',
-    'camelcase': 'off',
-    'no-mixed-operators':'off',
-    'semi': 'off',
-    'indent': 'off',
-    'implicit-arrow-linebreak': 'off',
-    'operator-linebreak': 'off',
-    'arrow-parens': 'off',
-    'no-confusing-arrow': 'off',
     'prettier/prettier': 'error',
   },
 }

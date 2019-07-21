@@ -25,8 +25,8 @@ npm i -S {{projectName}}
 
 ## Usage
 ```js
-// import all
 import {{ModuleName}} from '{{projectName}}'
+import '{{projectName}}/lib/css/index.css';
 
 // Global register
 Vue.component('{{ModuleName}}', {{ModuleName}})
@@ -51,8 +51,6 @@ Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectNa
 ```
 
 ## Props
-
-### Common
 | Name                      | Type                                      | DefaultValue                                  | Description  |
 | ------------------------- | ----------------------------------------- | --------------------------------------------- | ------------ |
 | `prop`                    | `type`                                    | none                                          | Description |

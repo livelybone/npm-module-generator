@@ -12,7 +12,7 @@
     "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
     "build:css": "cross-env NODE_ENV=production node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
     "build": "rimraf ./lib && npm run build:css && cross-env NODE_ENV=production rollup -c",
-    "eslint": "eslint ./ --ext .vue,.ts, --fix",
+    "eslint": "eslint ./ --ext .vue,.ts,.js --fix",
     "test": "cross-env BABEL_ENV=test karma start --single-run",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git-cz"
@@ -34,6 +34,7 @@
     "@babel/plugin-transform-runtime": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
     "@babel/runtime": "^7.5.1",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
     "@typescript-eslint/parser": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.19",
     "babel-loader": "^8.0.6",
@@ -45,6 +46,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.1.0",
@@ -87,7 +89,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{ts,vue}": [
+    "**/*.{js,ts,vue}": [
       "eslint --fix",
       "git update-index --again"
     ],

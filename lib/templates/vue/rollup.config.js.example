@@ -17,9 +17,15 @@ console.log('>> css file copy successful')
 
 function getEntries() {
   const reg = /\.vue$/
-  return fs.readdirSync(path.resolve(__dirname, './src/components'))
-    .filter(filename => reg.test(filename)
-      && !fs.statSync(path.resolve(__dirname, './src/components', filename)).isDirectory())
+  return fs
+    .readdirSync(path.resolve(__dirname, './src/components'))
+    .filter(
+      filename =>
+        reg.test(filename) &&
+        !fs
+          .statSync(path.resolve(__dirname, './src/components', filename))
+          .isDirectory(),
+    )
     .map(filename => ({
       name: filename.replace(reg, ''),
       filename: path.resolve(__dirname, './src/components', filename),
