@@ -15,7 +15,7 @@ module.exports = {
     vue({ css: true }),
     babel({
       babelrc: false,
-      externalHelpers: true,
+      externalHelpers: false,
       runtimeHelpers: true,
       extensions: [...DEFAULT_EXTENSIONS, '.vue'],
       presets: [
@@ -29,13 +29,6 @@ module.exports = {
           },
         ],
       ],
-      plugins: process.env.NODE_ENV === 'test'
-        ? [
-          '@babel/plugin-transform-runtime',
-          '@babel/plugin-external-helpers',
-          'istanbul',
-        ]
-        : ['@babel/plugin-external-helpers'],
     }),
   ],
 }

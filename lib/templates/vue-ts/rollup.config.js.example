@@ -7,13 +7,13 @@ import packageConf from './package.json'
 
 const baseConf = require('./rollup.config.base')
 
-const formats = ['es', 'umd']
-
 fs.copyFileSync(
   path.resolve(__dirname, './src/css/index.scss'),
   path.resolve(__dirname, './lib/css/index.scss'),
 )
 console.log('>> css file copy successful')
+
+const formats = ['es', 'umd']
 
 function getEntries() {
   const reg = /\.vue$/
@@ -34,7 +34,6 @@ function getEntries() {
 }
 
 const conf = entry => ({
-  ...baseConf,
   input: entry.filename,
   output: entry.formats.map(format => ({
     file: `./lib/${format}/${entry.name}.js`,

@@ -11,7 +11,7 @@ export default {
     commonjs(),
     babel({
       babelrc: true,
-      externalHelpers: true,
+      externalHelpers: false,
       runtimeHelpers: true,
     }),
   ],

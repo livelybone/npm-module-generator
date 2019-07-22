@@ -3,7 +3,6 @@ const resolve = require('rollup-plugin-node-resolve')
 const vuePlugin = require('rollup-plugin-vue')
 const babel = require('rollup-plugin-babel')
 const { DEFAULT_EXTENSIONS } = require('@babel/core')
-const typescript = require('rollup-plugin-typescript2')
 
 const vue = vuePlugin.default || vuePlugin
 
@@ -14,16 +13,13 @@ module.exports = {
     }),
     commonjs(),
     vue({ css: true }),
-    typescript({
-      cacheRoot: './node_modules/.rts2_cache',
-      objectHashIgnoreUnknownHack: true,
-    }),
     babel({
       babelrc: false,
-      externalHelpers: true,
+      externalHelpers: false,
       runtimeHelpers: true,
       extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
       presets: [
+        '@babel/preset-typescript',
         [
           '@babel/preset-env',
           {
@@ -34,14 +30,6 @@ module.exports = {
           },
         ],
       ],
-      plugins:
-        process.env.NODE_ENV === 'test'
-          ? [
-              '@babel/plugin-transform-runtime',
-              '@babel/plugin-external-helpers',
-              'istanbul',
-            ]
-          : ['@babel/plugin-external-helpers'],
     }),
   ],
 }
