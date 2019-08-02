@@ -21,6 +21,7 @@
     "module",
     "library",
     "component",
+    "generator",
     "generate",
     "create",
     "vue",
