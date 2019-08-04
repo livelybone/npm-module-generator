@@ -51,3 +51,6 @@ module-generator [projectName] [--template] [cmd]
 > `homepage`: The url of the demo or homepage. We may prefer demo address 
 
 > `module-name`: The variable the module exported in format `umd`
+
+## Module dev
+Use the command `npm run dev` in the module you generated to develop it
