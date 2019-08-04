@@ -7,11 +7,12 @@
   "unpkg": "./lib/umd/index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "watch:css": "node-sass -w ./src/css/index.scss ./lib/css/index.css",
-    "build:css": "cross-env NODE_ENV=production node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed",
+    "build:css": "cross-env NODE_ENV=production node-sass ./src/css/index.scss ./lib/css/index.css --output-style compressed && ncp ./src/css/index.scss ./lib/css/index.scss",
+    "build:js": "cross-env NODE_ENV=production rollup -c",
+    "dev": "rimraf ./lib && cross-env BUILD_ENV=watch node watch.js",
+    "build": "rimraf ./lib && npm run build:css && npm run build:js",
     "build:test": "rimraf ./test-lib && cross-env NODE_ENV=test rollup -c rollup.config.test.js --sourcemap",
-    "build": "rimraf ./lib && npm run build:css && cross-env NODE_ENV=production rollup -c",
-    "eslint": "eslint ./ --ext .js,.jsx --fix",
+    "eslint": "eslint ./ --ext .js,.jsx,.ts --fix",
     "test": "npm run build:test && cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- ./test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git-cz"
@@ -33,13 +34,17 @@
     "@babel/preset-env": "^7.5.0",
     "@babel/register": "^7.4.4",
     "@babel/runtime": "^7.5.1",
+    "@livelybone/singleton": "^1.1.1",
     "babel-eslint": "^10.0.2",
     "babel-plugin-istanbul": "^5.1.4",
     "babel-preset-react-app": "^9.0.0",
     "chai": "^4.2.0",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.0.2",
     "commitizen": "^3.0.7",
     "conventional-changelog-cli": "^2.0.12",
     "cross-env": "^5.2.0",
+    "cross-spawn": "^6.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.3.0",
     "eslint-config-react-app": "^4.0.1",
@@ -49,11 +54,13 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "express": "^4.17.1",
     "husky": "^3.0.0",
     "istanbul": "^1.1.0-alpha.1",
     "jsdom": "^15.1.1",
     "lint-staged": "^9.1.0",
     "mocha": "^5.2.0",
+    "ncp": "^2.0.0",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -75,7 +82,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx}": [
+    "**/*.{js,jsx,ts}": [
       "eslint --fix",
       "git update-index --again"
     ],

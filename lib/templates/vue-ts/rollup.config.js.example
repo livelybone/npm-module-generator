@@ -7,11 +7,7 @@ import packageConf from './package.json'
 
 const baseConf = require('./rollup.config.base')
 
-fs.copyFileSync(
-  path.resolve(__dirname, './src/css/index.scss'),
-  path.resolve(__dirname, './lib/css/index.scss'),
-)
-console.log('>> css file copy successful')
+const isWatch = process.env.BUILD_ENV === 'watch'
 
 const formats = ['es', 'umd']
 
@@ -43,7 +39,7 @@ const conf = entry => ({
   external: entry.external ? Object.keys(packageConf.dependencies || {}) : [],
   plugins: [
     ...baseConf.plugins,
-    (entry.needUglify !== false && uglify()),
+    entry.needUglify !== false && uglify(),
     license({
       banner: `Bundle of <%= pkg.name %>
                Generated: <%= moment().format('YYYY-MM-DD') %>
@@ -54,14 +50,17 @@ const conf = entry => ({
   ],
 })
 
-export default [
-  {
-    name: 'index',
-    filename: './src/index.ts',
-    formats: ['es'],
-    needUglify: false,
-    external: true,
-  },
-  { name: 'index', filename: './src/index.ts', formats: ['umd'] },
-  ...getEntries(),
-].map(conf)
+export default (isWatch
+  ? [{ name: 'index', filename: './src/index.ts', formats: ['umd'] }]
+  : [
+      {
+        name: 'index',
+        filename: './src/index.ts',
+        formats: ['es'],
+        needUglify: false,
+        external: true,
+      },
+      { name: 'index', filename: './src/index.ts', formats: ['umd'] },
+      ...getEntries(),
+    ]
+).map(conf)
