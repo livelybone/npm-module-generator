@@ -25,7 +25,7 @@ yarn.lock
 /.eslintignore
 /.prettierrc.js
 /.babelrc.js
-/.tsconfig.json
 /webpack.*.js
 /rollup.*.js
 /tsconfig.json
+/watch.js

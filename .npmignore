@@ -24,7 +24,7 @@ package-lock.json
 /.eslintignore
 /.prettierrc.js
 /.babelrc.js
-/.tsconfig.json
+/tsconfig.json
 /index.js
 /webpack.*.js
 /rollup.*.js
