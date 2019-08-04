@@ -76,7 +76,6 @@ function build(cmd = 'build:js') {
 
 watcher.on('all', (event, filename) => {
   const isCss = /.s?css$/
-  console.log(event, filename)
   if (isCss.test(filename)) build('build:css')
   else build()
 })
