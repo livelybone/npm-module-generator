@@ -8,6 +8,7 @@
   "types": "./index.d.ts",
   "scripts": {
     "build:js": "cross-env NODE_ENV=production rollup -c",
+    "build:dts": "cross-env NODE_ENV=production BUILD_ENV=dts rollup -c",
     "dev": "rimraf ./lib && cross-env BUILD_ENV=watch node watch.js",
     "build": "rimraf ./lib && npm run build:js",
     "build:test": "rimraf ./test-lib && cross-env NODE_ENV=test rollup -c rollup.config.test.js --sourcemap",

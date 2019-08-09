@@ -7,6 +7,7 @@ import packageConf from './package.json'
 import baseConf from './rollup.config.base'
 
 const isWatch = process.env.BUILD_ENV === 'watch'
+const isDts = process.env.BUILD_ENV === 'dts'
 
 const formats = ['es', 'umd']
 
@@ -47,10 +48,18 @@ const conf = entry => ({
   ],
 })
 
+// eslint-disable-next-line no-nested-ternary
 export default isWatch
   ? [{ name: 'index', filename: './src/index.ts', formats: ['umd'] }].map(conf)
+  : isDts
+  ? [
+      {
+        input: './src/index.ts',
+        output: [{ file: './index.d.ts', format: 'es' }],
+        plugins: [dts()],
+      },
+    ]
   : [
-    ...[
       {
         name: 'index',
         filename: './src/index.ts',
@@ -59,10 +68,4 @@ export default isWatch
         external: true,
       },
       ...getEntries(),
-    ].map(conf),
-    {
-      input: './src/index.ts',
-      output: [{ file: './index.d.ts', format: 'es' }],
-      plugins: [dts()],
-    },
-  ]
+    ].map(conf)
