@@ -37,11 +37,13 @@ const conf = entry => ({
     name: entry.name === 'index' ? '{{ModuleName}}' : `${entry.name}{{ModuleName}}`,
     globals: {
       react: 'React',
+      'react-dom': 'ReactDOM',
     },
   })),
   external: [
     ...(entry.external ? Object.keys(packageConf.dependencies || {}) : []),
     'react',
+    'react-dom',
   ],
   plugins: [
     ...baseConf.plugins,
