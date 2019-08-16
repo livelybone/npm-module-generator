@@ -14,8 +14,20 @@
 
 <script>
 var module = document.getElementById('module')
+var cr = React.createElement
+
 // do something ...
-ReactDOM.render(React.createElement({{ModuleName}}), module)
+function Comp(props) {
+  const state = React.useState({})
+
+  return cr(
+    'div',
+    null,
+    cr({{ModuleName}})
+  )
+}
+
+ReactDOM.render(cr(Comp), module)
 </script>
 </body>
 </html>
