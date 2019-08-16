@@ -32,6 +32,9 @@ npm i -S {{projectName}}
 ## Global name
 `{{ModuleName}}`
 
+## Interface
+See in [index.d.ts](./index.d.ts)
+
 ## Usage
 ```js
 import * as {{ModuleName}} from '{{projectName}}'
