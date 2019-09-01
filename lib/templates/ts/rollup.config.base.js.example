@@ -30,9 +30,10 @@ export default {
         process.env.NODE_ENV === 'test'
           ? [
               '@babel/plugin-transform-runtime',
+              '@babel/plugin-proposal-class-properties',
               'istanbul',
             ]
-          : [],
+          : ['@babel/plugin-proposal-class-properties'],
     }),
   ],
 }
