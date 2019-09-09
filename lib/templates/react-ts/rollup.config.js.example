@@ -60,7 +60,14 @@ const conf = entry => ({
 
 // eslint-disable-next-line no-nested-ternary
 export default isWatch
-  ? [{ name: 'index', filename: './src/index.ts', formats: ['umd'] }].map(conf)
+  ? [
+      {
+        name: 'index',
+        filename: './src/index.ts',
+        formats: ['umd'],
+        needUglify: false,
+      },
+    ].map(conf)
   : isDts
   ? [
       {

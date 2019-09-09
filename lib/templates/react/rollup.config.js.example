@@ -57,7 +57,14 @@ const conf = entry => ({
 })
 
 export default isWatch
-  ? [{ name: 'index', filename: './src/index.js', formats: ['umd'] }].map(conf)
+  ? [
+      {
+        name: 'index',
+        filename: './src/index.js',
+        formats: ['umd'],
+        needUglify: false,
+      },
+    ].map(conf)
   : [
     {
       name: 'index',
