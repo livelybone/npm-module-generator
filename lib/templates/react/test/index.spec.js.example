@@ -25,7 +25,7 @@ describe('index', () => {
 
   it('', () => {
     act(() => {
-      ReactDOM.render({{ModuleName}}(), container)
+      ReactDOM.render(React.createElement({{ModuleName}}), container)
     })
     expect(container.querySelector('div')).to.not.equal(null)
   })
