@@ -37,43 +37,43 @@ module-generator [projectName] [--template] [cmd]
 ```
 > 这不能确保模块是最新的
 
-> 创建一个 Vue 组件
+#### 创建一个 Vue 组件
 
 ```bash
 npx @livelybone/npm-module-generator VueComponentName --vue
 ```
 
-> 创建一个 Vue 组件，并使用 Typescript
+#### 创建一个 Vue 组件，并使用 Typescript
 
 ```bash
 npx @livelybone/npm-module-generator VueComponentName --vue-ts
 ```
 
-> 创建一个 React 组件
+#### 创建一个 React 组件
 
 ```bash
 npx @livelybone/npm-module-generator ReactComponentName --react
 ```
 
-> 创建一个 React 组件，并使用 Typescript
+#### 创建一个 React 组件，并使用 Typescript
 
 ```bash
 npx @livelybone/npm-module-generator ReactComponentName --react-ts
 ```
 
-> 创建一个 js 库
+#### 创建一个 js 库
 
 ```bash
 npx @livelybone/npm-module-generator ModuleName --js
 ```
 
-> 创建一个 js 库，并使用 Typescript
+#### 创建一个 js 库，并使用 Typescript
 
 ```bash
 npx @livelybone/npm-module-generator ModuleName --ts
 ```
 
-> 查看 @livelybone/npm-module-generator 最新版本
+#### 查看 @livelybone/npm-module-generator 最新版本
 
 ```bash
 npx @livelybone/npm-module-generator -v

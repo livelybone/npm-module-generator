@@ -37,43 +37,43 @@ module-generator [projectName] [--template] [cmd]
 ```
 > This can not ensure that the module is up to date
 
-> Create a Vue component
+#### Create a Vue component
 
 ```bash 
 npx @livelybone/npm-module-generator VueComponentName --vue
 ```
 
-> Create a Vue component with typescript
+#### Create a Vue component with typescript
 
 ```bash 
 npx @livelybone/npm-module-generator VueComponentName --vue-ts
 ```
 
-> Create a React component/library
+#### Create a React component/library
 
 ```bash 
 npx @livelybone/npm-module-generator ReactComponentName --react
 ```
 
-> Create a React component/library with typescript
+#### Create a React component/library with typescript
 
 ```bash 
 npx @livelybone/npm-module-generator ReactComponentName --react-ts
 ```
 
-> Create a js module/library
+#### Create a js module/library
 
 ```bash 
 npx @livelybone/npm-module-generator ModuleName --js
 ```
 
-> Create a js module/library with typescript
+#### Create a js module/library with typescript
 
 ```bash 
 npx @livelybone/npm-module-generator ModuleName --ts
 ```
 
-> See the version
+#### See the version
 
 ```bash 
 npx @livelybone/npm-module-generator -v
