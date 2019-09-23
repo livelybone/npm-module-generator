@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "5.5.16",
+  "version": "5.6.0",
   "description": "A cli for generating a framework of npm module.",
   "main": "./lib/index.js",
   "bin": {
@@ -24,13 +24,13 @@
     "generator",
     "generate",
     "create",
-    "vue",
-    "vue + typescript",
-    "react",
-    "react + typescript",
-    "js tool",
-    "js tool with typescript",
-    "cli"
+    "vue(+typescript)",
+    "react(+typescript)",
+    "js(+typescript)",
+    "rollup configured",
+    "unit test support",
+    "tree-shaking support",
+    "compile in real time"
   ],
   "author": "livelybone (2631541504@qq.com)",
   "license": "MIT",
