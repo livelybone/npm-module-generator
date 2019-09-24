@@ -12,8 +12,10 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   'rules': {
+    'no-useless-constructor': 'off',
     'no-undef': 'off',
     'prettier/prettier': 'error',
+    'import/prefer-default-export': 'off',
   },
   'settings': {
     'import/resolver': {
