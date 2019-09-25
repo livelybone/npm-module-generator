@@ -63,5 +63,12 @@ export default isWatch
       needUglify: false,
       external: true,
     },
+    {
+      name: 'index',
+      filename: './src/index.ts',
+      formats: ['umd'],
+      needUglify: true,
+      external: false,
+    },
     ...getEntries(),
   ].map(conf)

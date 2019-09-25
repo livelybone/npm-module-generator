@@ -88,6 +88,8 @@ export default isWatch
         name: 'index',
         filename: './src/index.ts',
         formats: ['umd'],
+        needUglify: true,
+        external: false,
       },
       ...getEntries(),
     ].map(conf)
