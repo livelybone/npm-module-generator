@@ -4,6 +4,6 @@
 
 <script lang="ts">
 export default {
-  name: '{{ModuleName}}',
+  name: '{{GlobalName}}',
 }
 </script>

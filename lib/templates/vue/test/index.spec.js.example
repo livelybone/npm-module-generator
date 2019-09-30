@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import {{ModuleName}} from '../src/components/Index.vue'
+import {{GlobalName}} from '../src/components/Index.vue'
 
 describe('Index.vue', () => {
   it('Rendered', () => {
-    const wrapper = shallowMount({{ModuleName}})
+    const wrapper = shallowMount({{GlobalName}})
     expect(wrapper.find('div').exists()).to.equal(true)
   })
 })

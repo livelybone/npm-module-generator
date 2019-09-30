@@ -7,6 +7,8 @@
 
 > `pkg.module supported`, which means that you can apply tree-shaking in you project
 
+[中文文档](./README-CN.md)
+
 {{description}}
 
 ## repository
@@ -29,15 +31,15 @@ Your can see the usage by run the example of the module, here is the step:
 npm i -S {{projectName}}
 ```
 
-## Global name
-`{{ModuleName}}`
+## Global name - The variable the module exported in `umd` bundle
+`{{GlobalName}}`
 
 ## Interface
-See in [index.d.ts](./index.d.ts)
+See what method or params you can use in [index.d.ts](./index.d.ts)
 
 ## Usage
 ```js
-import * as {{ModuleName}} from '{{projectName}}'
+import * as {{GlobalName}} from '{{projectName}}'
 ```
 
 Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)

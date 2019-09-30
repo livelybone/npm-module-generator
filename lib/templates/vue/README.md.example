@@ -7,6 +7,8 @@
 
 > `pkg.module supported`, which means that you can apply tree-shaking in you project
 
+[中文文档](./README-CN.md)
+
 {{description}}
 
 ## repository
@@ -29,29 +31,29 @@ Your can see the usage by run the example of the module, here is the step:
 npm i -S {{projectName}}
 ```
 
-## Global name
-`{{ModuleName}}`
+## Global name - The variable the module exported in `umd` bundle
+`{{GlobalName}}`
 
 ## Interface
-See in [index.d.ts](./index.d.ts)
+See what method or params you can use in [index.d.ts](./index.d.ts)
 
 ## Usage
 ```js
-import {{ModuleName}} from '{{projectName}}'
+import {{GlobalName}} from '{{projectName}}'
 import '{{projectName}}/lib/css/index.css';
 
 // Global register
-Vue.component('{{ModuleName}}', {{ModuleName}})
+Vue.component('{{GlobalName}}', {{GlobalName}})
 
 // Local register
 new Vue({
-  components:{{{ModuleName}}}
+  components:{{{GlobalName}}}
 })
 ```
 
 when you want to set this module as external while you are developing another module, you should import it like this:
 ```js
-import * as {{ModuleName}}  from '{{projectName}}'
+import * as {{GlobalName}}  from '{{projectName}}'
 
 // then use it by need
 ```
@@ -62,19 +64,8 @@ Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectNa
 <script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
 ```
 
-## Props
-| Name                      | Type                                      | DefaultValue                                  | Description  |
-| ------------------------- | ----------------------------------------- | --------------------------------------------- | ------------ |
-| `prop`                    | `type`                                    | none                                          | Description |
-
-
-## Events
-| Name              | EmittedData           | Description                                       |
-| ----------------- | --------------------- | ------------------------------------------------- |
-| `event`           | `type`                |  |
-
 ## style
-For building style, you can use the css or scss file in lib directory.
+For building style, you may need to import the css or scss file:
 ```js
 // scss
 import 'node_modules/{{projectName}}/lib/css/index.scss'
@@ -91,7 +82,7 @@ Or
 @import 'node_modules/{{projectName}}/lib/css/index.css'
 ```
 
-Or, you can build your custom style by copying and editing `index.scss`
+Or, you can build your custom style by copying, editing and importing `node_modules/{{projectName}}/lib/css/index.scss`
 
 ## QA
 

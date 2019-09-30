@@ -6,7 +6,7 @@ const conf = entry => ({
   output: entry.formats.map(format => ({
     file: `./test-lib/${entry.name}.js`,
     format,
-    name: '{{ModuleName}}',
+    name: '{{GlobalName}}',
   })),
   plugins: [
     ...baseConf.plugins,

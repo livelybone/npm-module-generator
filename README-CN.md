@@ -2,7 +2,7 @@
 [![NPM Version](http://img.shields.io/npm/v/@livelybone/npm-module-generator.svg?style=flat-square)](https://www.npmjs.com/package/@livelybone/npm-module-generator)
 [![Download Month](http://img.shields.io/npm/dm/@livelybone/npm-module-generator.svg?style=flat-square)](https://www.npmjs.com/package/@livelybone/npm-module-generator)
 
-[En Doc](./README.md)
+[English Document](./README.md)
 
 一个用于创建 npm 包的脚手架
 
@@ -64,13 +64,13 @@ npx @livelybone/npm-module-generator ReactComponentName --react-ts
 #### 创建一个 js 库
 
 ```bash
-npx @livelybone/npm-module-generator ModuleName --js
+npx @livelybone/npm-module-generator GlobalName --js
 ```
 
 #### 创建一个 js 库，并使用 Typescript
 
 ```bash
-npx @livelybone/npm-module-generator ModuleName --ts
+npx @livelybone/npm-module-generator GlobalName --ts
 ```
 
 #### 查看 @livelybone/npm-module-generator 最新版本
@@ -90,6 +90,8 @@ npx @livelybone/npm-module-generator -v
 
 > `project-name`: 库的名称（用于发布在 npm 上的名称）
 
+> `global-name`: 当库被用 `umd` 方式导入在项目中时，向全局注册的变量名
+
 > `description`: 库的描述
 
 > `repository`: 库源代码地址
@@ -101,8 +103,6 @@ npx @livelybone/npm-module-generator -v
 > `author`: 作者（邮箱地址）
 
 > `homepage`: 主页，用于详细展示你的库
-
-> `module-name`: 当库被用 `umd` 方式导入在项目中时，向全局注册的变量名
 
 ## Module dev
 使用命令 `cross-env PORT=3000 npm run dev` 来开发，每次修改之后刷新页面即可看到改动内容

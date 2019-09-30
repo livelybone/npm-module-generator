@@ -3,7 +3,7 @@ const { JSDOM } = require('jsdom')
 const React = require('react')
 const ReactDOM = require('react-dom')
 const { act } = require('react-dom/test-utils')
-const {{ModuleName}} = require('../test-lib/index')
+const {{GlobalName}} = require('../test-lib/index')
 
 const dom = new JSDOM('')
 
@@ -25,7 +25,7 @@ describe('index', () => {
 
   it('', () => {
     act(() => {
-      ReactDOM.render(React.createElement({{ModuleName}}), container)
+      ReactDOM.render(React.createElement({{GlobalName}}), container)
     })
     expect(container.querySelector('div')).to.not.equal(null)
   })

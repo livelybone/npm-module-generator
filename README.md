@@ -40,37 +40,37 @@ module-generator [projectName] [--template] [cmd]
 #### Create a Vue component
 
 ```bash 
-npx @livelybone/npm-module-generator VueComponentName --vue
+npx @livelybone/npm-module-generator VueComponentDir --vue
 ```
 
 #### Create a Vue component with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator VueComponentName --vue-ts
+npx @livelybone/npm-module-generator VueComponentDir --vue-ts
 ```
 
 #### Create a React component/library
 
 ```bash 
-npx @livelybone/npm-module-generator ReactComponentName --react
+npx @livelybone/npm-module-generator ReactComponentDir --react
 ```
 
 #### Create a React component/library with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator ReactComponentName --react-ts
+npx @livelybone/npm-module-generator ReactComponentDir --react-ts
 ```
 
 #### Create a js module/library
 
 ```bash 
-npx @livelybone/npm-module-generator ModuleName --js
+npx @livelybone/npm-module-generator ModuleDir --js
 ```
 
 #### Create a js module/library with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator ModuleName --ts
+npx @livelybone/npm-module-generator ModuleDir --ts
 ```
 
 #### See the version
@@ -90,6 +90,8 @@ npx @livelybone/npm-module-generator -v
 
 > `project-name`: The name of the module will be used in npm
 
+> `global-name`: The variable the module exported in `umd` bundle
+
 > `description`: Description of the module 
 
 > `repository`: Repository of the module 
@@ -101,8 +103,6 @@ npx @livelybone/npm-module-generator -v
 > `author`: Author of the module
 
 > `homepage`: The url of the demo or homepage. We may prefer demo address 
-
-> `module-name`: The variable the module exported in format `umd`
 
 ## Module dev
 Use the command `npm run dev` in the module you generated to develop it，you can see the changes by refreshing the demo page
