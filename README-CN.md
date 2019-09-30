@@ -88,7 +88,7 @@ npx @livelybone/npm-module-generator -v
 
 ## Params of initializer
 
-> `project-name`: 库的名称（用于发布在 npm 上的名称）
+> `project-name`: 库的名称（用于发布在 npm 上的名称，安装时会用到 - `npm i [your-preject-name]`）
 
 > `global-name`: 当库被用 `umd` 方式导入在项目中时，向全局注册的变量名
 

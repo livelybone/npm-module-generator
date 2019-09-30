@@ -88,7 +88,7 @@ npx @livelybone/npm-module-generator -v
 
 ## Params of initializer
 
-> `project-name`: The name of the module will be used in npm
+> `project-name`: The name of the module will be used in npm, like `npm i [your-preject-name]`
 
 > `global-name`: The variable the module exported in `umd` bundle
 
