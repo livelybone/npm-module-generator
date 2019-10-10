@@ -40,37 +40,37 @@ module-generator [projectName] [--template] [cmd]
 #### Create a Vue component
 
 ```bash 
-npx @livelybone/npm-module-generator VueComponentDir --vue
+npx @livelybone/npm-module-generator vue-component-dir --vue
 ```
 
 #### Create a Vue component with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator VueComponentDir --vue-ts
+npx @livelybone/npm-module-generator vue-component-dir --vue-ts
 ```
 
 #### Create a React component/library
 
 ```bash 
-npx @livelybone/npm-module-generator ReactComponentDir --react
+npx @livelybone/npm-module-generator react-component-dir --react
 ```
 
 #### Create a React component/library with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator ReactComponentDir --react-ts
+npx @livelybone/npm-module-generator react-component-dir --react-ts
 ```
 
 #### Create a js module/library
 
 ```bash 
-npx @livelybone/npm-module-generator ModuleDir --js
+npx @livelybone/npm-module-generator module-dir --js
 ```
 
 #### Create a js module/library with typescript
 
 ```bash 
-npx @livelybone/npm-module-generator ModuleDir --ts
+npx @livelybone/npm-module-generator module-dir --ts
 ```
 
 #### See the version
@@ -82,7 +82,7 @@ npx @livelybone/npm-module-generator -v
 ## Options
 |Argument|Default|Description|
 |--------|-------|-----------|
-|`projectName`|none|Optional. ProjectName, dirname|
+|`projectName`|none|Optional. Dirname of the module|
 |`template`|`js`|Optional. Chose template, options: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
 |`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
 

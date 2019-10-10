@@ -40,37 +40,37 @@ module-generator [projectName] [--template] [cmd]
 #### 创建一个 Vue 组件
 
 ```bash
-npx @livelybone/npm-module-generator VueComponentName --vue
+npx @livelybone/npm-module-generator vue-component-dir --vue
 ```
 
 #### 创建一个 Vue 组件，并使用 Typescript
 
 ```bash
-npx @livelybone/npm-module-generator VueComponentName --vue-ts
+npx @livelybone/npm-module-generator vue-component-dir --vue-ts
 ```
 
 #### 创建一个 React 组件
 
 ```bash
-npx @livelybone/npm-module-generator ReactComponentName --react
+npx @livelybone/npm-module-generator react-component-dir --react
 ```
 
 #### 创建一个 React 组件，并使用 Typescript
 
 ```bash
-npx @livelybone/npm-module-generator ReactComponentName --react-ts
+npx @livelybone/npm-module-generator react-component-dir --react-ts
 ```
 
 #### 创建一个 js 库
 
 ```bash
-npx @livelybone/npm-module-generator GlobalName --js
+npx @livelybone/npm-module-generator module-dir --js
 ```
 
 #### 创建一个 js 库，并使用 Typescript
 
 ```bash
-npx @livelybone/npm-module-generator GlobalName --ts
+npx @livelybone/npm-module-generator module-dir --ts
 ```
 
 #### 查看 @livelybone/npm-module-generator 最新版本
@@ -82,9 +82,9 @@ npx @livelybone/npm-module-generator -v
 ## Options
 |Argument|Default|Description|
 |--------|-------|-----------|
-|`projectName`|none|Optional. ProjectName, dirname|
-|`template`|`js`|Optional. Chose template, options: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
-|`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
+|`projectName`|none|项目目录|
+|`template`|`js`|指定模板，可选: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
+|`cmd`|none|`-v` `--v` `-version` `--version` -> 工具当前的版本 |
 
 ## Params of initializer
 
