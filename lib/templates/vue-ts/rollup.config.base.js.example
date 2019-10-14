@@ -8,6 +8,21 @@ const vue = vuePlugin.default || vuePlugin
 
 module.exports = {
   plugins: [
+    ...(isWatch
+      ? [
+          {
+            name: 'replace',
+            transform(code) {
+              return {
+                code: code.replace(
+                  /process\.env\.NODE_ENV/g,
+                  JSON.stringify('production'),
+                ),
+              }
+            },
+          },
+        ]
+      : []),
     resolve({
       extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
     }),
