@@ -4,6 +4,8 @@ const vuePlugin = require('rollup-plugin-vue')
 const babel = require('rollup-plugin-babel')
 const { DEFAULT_EXTENSIONS } = require('@babel/core')
 
+const isWatch = process.env.BUILD_ENV === 'watch'
+
 const vue = vuePlugin.default || vuePlugin
 
 module.exports = {
