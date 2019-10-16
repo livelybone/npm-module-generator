@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "A cli for generating a framework of npm module.",
   "main": "./lib/index.js",
   "bin": {

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{GlobalName}}</title>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!--china region: If your example running slow at begin, please try to use the follow CDN-->
+  <!--<script src="https://cdn.bootcss.com/vue/2.6.10/vue.runtime.min.js" crossorigin></script>-->
   <script src="../lib/umd/index.js"></script>
   <link rel="stylesheet" href="../lib/css/index.css">
 </head>
