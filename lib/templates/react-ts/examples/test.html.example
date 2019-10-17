@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{GlobalName}}</title>
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js" crossorigin></script>
   <!--china region: If your example running slow at begin, please try to use the follow CDN-->
   <!--<script src="https://cdn.bootcss.com/react/16.9.0/umd/react.development.js" crossorigin></script>-->
