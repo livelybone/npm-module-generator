@@ -12,6 +12,7 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   'rules': {
+    'no-shadow': 2,
     'no-useless-constructor': 'off',
     'no-undef': 'off',
     'prettier/prettier': 'error',

@@ -8,6 +8,7 @@ module.exports = {
     'node': true,
   },
   'extends': [
+    'no-shadow': 2,
     'eslint:recommended',
     'airbnb-base',
     'plugin:prettier/recommended',
