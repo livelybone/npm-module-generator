@@ -68,10 +68,10 @@ Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectNa
 For building style, you may need to import the css or scss file:
 ```js
 // scss
-import 'node_modules/{{projectName}}/lib/css/index.scss'
+import '{{projectName}}/lib/css/index.scss'
 
 // css
-import 'node_modules/{{projectName}}/lib/css/index.css'
+import '{{projectName}}/lib/css/index.css'
 ```
 Or
 ```scss

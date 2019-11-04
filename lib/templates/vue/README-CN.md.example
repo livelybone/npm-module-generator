@@ -61,10 +61,10 @@ new Vue({
 你可能需要主动引入样式文件来应用组件的样式：
 ```js
 // scss
-import 'node_modules/{{projectName}}/lib/css/index.scss'
+import '{{projectName}}/lib/css/index.scss'
 
 // css
-import 'node_modules/{{projectName}}/lib/css/index.css'
+import '{{projectName}}/lib/css/index.css'
 ```
 Or
 ```scss
