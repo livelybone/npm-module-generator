@@ -8,16 +8,17 @@ module.exports = {
     'node': true,
   },
   'extends': [
-    'no-shadow': 2,
     'eslint:recommended',
     'airbnb-base',
     'plugin:prettier/recommended',
-    'import/prefer-default-export': 'off',
   ],
   'rules': {
-    'no-useless-constructor': 'off',
-    'no-undef': 'off',
-    'prettier/prettier': 'error',
+    'no-useless-constructor': 0,
+    'no-undef': 0,
+    'import/prefer-default-export': 0,
+    'prettier/prettier': 2,
+    'no-console': 2,
+    'no-shadow': 2,
   },
   'plugins': ['prettier'],
 }

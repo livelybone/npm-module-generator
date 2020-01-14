@@ -13,14 +13,15 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   'rules': {
+    'no-useless-constructor': 0,
+    'no-undef': 0,
+    'import/prefer-default-export': 0,
+    '@typescript-eslint/no-unused-vars': 1,
+    'prettier/prettier': 2,
+    'no-console': 2,
     'no-shadow': 2,
-    'no-useless-constructor': 'off',
-    'no-undef': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    'prettier/prettier': 'error',
-    'import/prefer-default-export': 'off',
     'import/extensions': [
-      'error',
+      2,
       'ignorePackages',
       {
         'js': 'never',
