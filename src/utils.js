@@ -49,7 +49,6 @@ export function parseArgs() {
     },
     { permissive: true },
   )
-  console.log(args)
 
   const templates = getTemplates()
 
