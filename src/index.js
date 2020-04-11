@@ -18,7 +18,7 @@ async function run() {
   const root = getRoot()
   const config = getConfig(root)
 
-  console.log(chalk.yellow('>  Input, press ^C at any time to quit.\n\r'))
+  console.log(chalk.yellow('\n\r>  Input, press ^C at any time to quit.\n\r'))
   await questions(Object.values(config))
 
   console.log(chalk.yellow('\n\r>  Start to create directories\n\r'))

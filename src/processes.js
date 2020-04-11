@@ -13,7 +13,7 @@ export const { cmd, template, directory } = parseArgs()
 
 export function logVersion() {
   console.log(
-    `Version is ${chalk.yellow(
+    `\n\rVersion is ${chalk.yellow(
       getFile(require, resolve(__dirname, '../package.json')).version,
     )}`,
   )
