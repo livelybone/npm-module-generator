@@ -23,7 +23,7 @@ https://github.com/livelybone/-livelybone-npm-module-generator.git
 npx `Recommend`
 
 ```bash
-npx @livelybone/npm-module-generator [projectName] [--template] [cmd]
+npx @livelybone/npm-module-generator [directory] [--template] [cmd]
 ```
 > 如果您以前通过 `npm install -g @livelybone/npm-module-generator` 在全局范围内安装了 @livelybone/npm-module-generator，我们建议您使用 `npm uninstall -g @livelybone/npm-module-generator` 卸载软件包，以确保 npx 始终使用最新版本。
 
@@ -33,7 +33,7 @@ npm
 # npm global install
 npm i -g @livelybone/npm-module-generator
 
-module-generator [projectName] [--template] [cmd]
+module-generator [directory] [--template] [cmd]
 ```
 > 这不能确保模块是最新的
 
@@ -82,7 +82,7 @@ npx @livelybone/npm-module-generator -v
 ## Options
 |Argument|Default|Description|
 |--------|-------|-----------|
-|`projectName`|none|项目目录|
+|`directory`|none|项目目录|
 |`template`|`js`|指定模板，可选: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
 |`cmd`|none|`-v` `--v` `-version` `--version` -> 工具当前的版本 |
 

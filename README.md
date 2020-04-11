@@ -23,7 +23,7 @@ https://github.com/livelybone/-livelybone-npm-module-generator.git
 npx `Recommend`
 
 ```bash
-npx @livelybone/npm-module-generator [projectName] [--template] [cmd]
+npx @livelybone/npm-module-generator [directory] [--template] [cmd]
 ```
 > If you've previously installed @livelybone/npm-module-generator globally via `npm install -g @livelybone/npm-module-generator`, we recommend you uninstall the package using `npm uninstall -g @livelybone/npm-module-generator` to ensure that npx always uses the latest version.
 
@@ -33,7 +33,7 @@ npm
 # npm global install
 npm i -g @livelybone/npm-module-generator
 
-module-generator [projectName] [--template] [cmd]
+module-generator [directory] [--template] [cmd]
 ```
 > This can not ensure that the module is up to date
 
@@ -82,7 +82,7 @@ npx @livelybone/npm-module-generator -v
 ## Options
 |Argument|Default|Description|
 |--------|-------|-----------|
-|`projectName`|none|Optional. Dirname of the module|
+|`directory`|none|Optional. Dirname of the module|
 |`template`|`js`|Optional. Chose template, options: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
 |`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
 
