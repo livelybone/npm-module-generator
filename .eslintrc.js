@@ -14,6 +14,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'no-param-reassign': 0,
     'function-paren-newline': 0,
+    'consistent-return': 0,
     'no-confusing-arrow': 0,
     'prettier/prettier': 2,
   },

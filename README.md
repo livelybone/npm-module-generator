@@ -84,7 +84,7 @@ npx @livelybone/npm-module-generator -v
 |--------|-------|-----------|
 |`directory`|none|Optional. Dirname of the module|
 |`template`|`js`|Optional. Chose template, options: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
-|`cmd`|none|Optional. `-v` `--v` `-version` `--version` -> version |
+|`cmd`|none|Optional. <br>`-v` `--v` `-version` `--version` -> version; <br>`--un-git` `-un-git` -> disabled git init; <br>`-i` `--i` `-install` `--install` -> enable npm install<br> |
 
 ## Params of initializer
 

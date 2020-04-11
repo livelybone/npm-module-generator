@@ -84,7 +84,7 @@ npx @livelybone/npm-module-generator -v
 |--------|-------|-----------|
 |`directory`|none|项目目录|
 |`template`|`js`|指定模板，可选: `['js', 'vue', 'react', 'ts', 'vue-ts', 'react-ts']`|
-|`cmd`|none|`-v` `--v` `-version` `--version` -> 工具当前的版本 |
+|`cmd`|none|`-v` `--v` `-version` `--version` -> 版本; <br>`--un-git` `-un-git` -> 禁用 Git 自动初始化; <br>`-i` `--i` `-install` `--install` -> 自动安装依赖包<br> |
 
 ## Params of initializer
 

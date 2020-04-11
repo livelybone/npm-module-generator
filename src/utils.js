@@ -33,16 +33,23 @@ function getTemplates() {
 }
 
 export function parseArgs() {
-  const args = arg({
-    '--version': String,
-    '--un-git': Boolean,
-    '--install': Boolean,
+  const args = arg(
+    {
+      '--version': String,
+      '--un-git': Boolean,
+      '--install': Boolean,
 
-    '-v': '--version',
-    '--v': '--version',
-    '-i': '--install',
-    '--i': '--install',
-  })
+      '-v': '--version',
+      '-version': '--version',
+      '--v': '--version',
+      '-un-git': '--un-git',
+      '-i': '--install',
+      '-install': '--install',
+      '--i': '--install',
+    },
+    { permissive: true },
+  )
+  console.log(args)
 
   const templates = getTemplates()
 

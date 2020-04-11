@@ -11,7 +11,9 @@ import {
 } from './processes'
 
 async function run() {
-  if (cmd.version) logVersion()
+  if (cmd.version) return logVersion()
+
+  logVersion()
 
   const root = getRoot()
   const config = getConfig(root)
