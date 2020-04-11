@@ -36,7 +36,12 @@ export function getConfig(root) {
     ? getFile(require, resolve(root, 'package.json'))
     : { name: directory }
   const plugin = getFile(require, template.path)
-  return plugin.options(packageJson)
+  const config = plugin.options(packageJson)
+  Object.entries(config).forEach(([name, item]) => {
+    item.name = name
+    item.defaultVal = item.defaultVal.bind(config)
+  })
+  return config
 }
 
 export function copyDir(root, config) {

@@ -103,7 +103,7 @@ export function questions(items) {
     .reduce(
       (pre, item) =>
         pre.then(async () => {
-          await question(rl, item, item.name, item.defaultValue)
+          await question(rl, item, item.name, item.defaultVal())
           return { ...pre, [item.name]: item.value }
         }),
       Promise.resolve({}),

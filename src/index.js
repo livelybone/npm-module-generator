@@ -19,15 +19,7 @@ async function run() {
   const config = getConfig(root)
 
   console.log(chalk.yellow('>  Input, press ^C at any time to quit.\n\r'))
-  await questions(
-    Object.entries(config).map(([name, item]) => {
-      item.name = name
-      item.defaultValue = item.defaultVal
-        ? `${item.defaultVal.call(config, __dirname)}`
-        : ''
-      return item
-    }),
-  )
+  await questions(Object.values(config))
 
   console.log(chalk.yellow('\n\r>  Start to create directories\n\r'))
   await copyDir(root, config)
