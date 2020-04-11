@@ -13,11 +13,11 @@ package-lock.json
 *.njsproj
 *.sln
 
-/test/
-/coverage/
-/src/
-/examples/
-/dist/
+/test/**
+/coverage/**
+/src/**
+/examples/**
+/dist/**
 
 /karma.conf.js
 /.eslintrc.js
@@ -28,3 +28,4 @@ package-lock.json
 /index.js
 /webpack.*.js
 /rollup.*.js
+/node-module-names.js
