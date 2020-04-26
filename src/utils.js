@@ -35,7 +35,7 @@ function getTemplates() {
 export function parseArgs() {
   const args = arg(
     {
-      '--version': String,
+      '--version': Boolean,
       '--un-git': Boolean,
       '--install': Boolean,
 
