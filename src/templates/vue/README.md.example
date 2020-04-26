@@ -18,7 +18,7 @@
 {{homepage}}
 
 ## Run Example
-Your can see the usage by run the example of the module, here is the step:
+you can see the usage by run the example of the module, here is the step:
 
 1. Clone the library `git clone {{repository}}`
 2. Go to the directory `cd your-module-directory`
@@ -58,10 +58,15 @@ import * as {{GlobalName}}  from '{{projectName}}'
 // then use it by need
 ```
 
-Use in html, see what your can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
+Use in html, see what you can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
 ```html
 <-- use what you want -->
 <script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
+```
+
+Or，see what you can use in [CDN: jsdelivr](https://cdn.jsdelivr.net/npm/{{projectName}}/lib/umd/)
+```html
+<script src="https://cdn.jsdelivr.net/npm/{{projectName}}/lib/umd/<--module-->.js"></script>
 ```
 
 ## style

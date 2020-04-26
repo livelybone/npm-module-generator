@@ -48,6 +48,11 @@ import * as {{GlobalName}} from '{{projectName}}'
 <script src="https://unpkg.com/{{projectName}}/lib/umd/<--module-->.js"></script>
 ```
 
+或者，你也可以使用 [CDN: jsdelivr](https://cdn.jsdelivr.net/npm/{{projectName}}/lib/umd/) 看到你能用到的所有 js 脚本
+```html
+<script src="https://cdn.jsdelivr.net/npm/{{projectName}}/lib/umd/<--module-->.js"></script>
+```
+
 ## style
 你可能需要主动引入样式文件来应用组件的样式：
 ```js
