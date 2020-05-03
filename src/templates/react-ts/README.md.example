@@ -42,6 +42,7 @@ See what method or params you can use in [index.d.ts](./index.d.ts)
 import * as {{GlobalName}} from '{{projectName}}'
 ```
 
+## CDN
 Use in html, see what you can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
 ```html
 <-- use what you want -->

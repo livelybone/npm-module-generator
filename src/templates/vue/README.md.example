@@ -58,6 +58,7 @@ import * as {{GlobalName}}  from '{{projectName}}'
 // then use it by need
 ```
 
+## CDN
 Use in html, see what you can use in [CDN: unpkg](https://unpkg.com/{{projectName}}/lib/umd/)
 ```html
 <-- use what you want -->
