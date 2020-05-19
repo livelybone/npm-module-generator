@@ -13,14 +13,17 @@ yarn.lock
 *.njsproj
 *.sln
 
+
 /coverage/
 /examples/
 /node_modules/
 /src/
 /test/
+/test-lib/
 
 /karma.conf.js
 /.eslintrc.js
+/.editorconfig
 /.eslintignore
 /.prettierrc.js
 /.babelrc.js

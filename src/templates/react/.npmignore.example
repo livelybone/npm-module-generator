@@ -23,6 +23,7 @@ yarn.lock
 
 /karma.conf.js
 /.eslintrc.js
+/.editorconfig
 /.eslintignore
 /.prettierrc.js
 /.babelrc.js
