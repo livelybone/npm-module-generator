@@ -21,7 +21,7 @@
 you can see the usage by run the example of the module, here is the step:
 
 1. Clone the library `git clone {{repository}}`
-2. Go to the directory `cd your-module-directory`
+2. Go to the directory `cd [the-module-directory]`
 3. Install npm dependencies `npm i`(use taobao registry: `npm i --registry=http://registry.npm.taobao.org`)
 4. Open service `npm run dev`
 5. See the example(usually is `http://127.0.0.1:3000/examples/test.html`) in your browser
@@ -82,10 +82,10 @@ import '{{projectName}}/lib/css/index.css'
 Or
 ```scss
 // scss
-@import 'node_modules/{{projectName}}/lib/css/index.scss'
+@import '~{{projectName}}/lib/css/index.scss'
 
 // css
-@import 'node_modules/{{projectName}}/lib/css/index.css'
+@import '~{{projectName}}/lib/css/index.css'
 ```
 
 Or, you can build your custom style by copying, editing and importing `node_modules/{{projectName}}/lib/css/index.scss`
