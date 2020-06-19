@@ -113,3 +113,6 @@ Use the command `npm run dev` in the module you generated to develop it，you ca
 
 2. The module I generated has no command `npm run build:dts`, so I cannot generate `index.d.ts`
 > The three templates `'js', 'vue', 'react'` do not support for generating `index.d.ts` temporarily，please update you `index.d.ts` file manually
+
+## TODO
+1. update typescript version to support optional chaining
