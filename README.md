@@ -116,3 +116,4 @@ Use the command `npm run dev` in the module you generated to develop it，you ca
 
 ## TODO
 1. update typescript version to support optional chaining
+1. add es6 building support
