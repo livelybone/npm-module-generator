@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{GlobalName}}</title>
 
-  <!-- Inject some babel helpers for code running. it is not needed in a real babel project when you configure babel or there is no new feature of js -->
-  <!-- 为代码运行注入一些babel帮助函数。在真正的babel项目中，当已配置 babel 时，或者js没有新特性时，并不需要它 -->
+  <!-- Inject some helpers for code running. It is not needed in a real project when you configured babel-polyfill or there is no new feature of js which is used in the project -->
+  <!-- 为代码运行注入一些babel帮助函数。在真正的babel项目中，当已配置 babel-polyfill 时，或者js没有新特性时，并不需要它 -->
   <script src="https://cdn.jsdelivr.net/npm/@babel/polyfill/dist/polyfill.min.js"></script>
 
   <script src="../lib/umd/index.js"></script>
