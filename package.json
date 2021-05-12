@@ -1,6 +1,6 @@
 {
   "name": "@livelybone/npm-module-generator",
-  "version": "7.2.3",
+  "version": "7.3.0",
   "description": "A cli for generating a framework of npm module.",
   "main": "lib/index.js",
   "bin": {
@@ -12,7 +12,10 @@
     "test": "npm start -- test",
     "eslint": "eslint ./ --fix",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepublishOnly": "npm run build && npm run eslint",
+    "release": "npm publish --registry=https://registry.npmjs.org",
+    "release:alpha": "npm publish --tag alpha --registry=https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
@@ -60,11 +63,11 @@
     "mocha": "^6.1.4",
     "ncp": "^2.0.0",
     "prettier": "^1.18.2",
-    "rollup": "^2.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-license": "^2.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.3.0"
+    "rollup": "2.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-license": "2.0.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "5.3.0"
   },
   "config": {
     "commitizen": {
@@ -73,7 +76,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "git rev-parse -q --no-revs --verify MERGE_HEAD || lint-staged"
     }
   },
   "lint-staged": {

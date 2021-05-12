@@ -11,7 +11,7 @@
     "build:js": "cross-env NODE_ENV=production rollup -c",
     "build:dts": "cross-env NODE_ENV=production BUILD_ENV=dts rollup -c",
     "dev": "rimraf ./lib && cross-env BUILD_ENV=watch node watch.js",
-    "build": "rimraf ./lib && npm run build:css && npm run build:js",
+    "build": "rimraf ./lib && npm run build:css && npm run build:js && npm run build:dts",
     "build:test": "rimraf ./test-lib && cross-env NODE_ENV=test rollup -c rollup.config.test.js --sourcemap",
     "eslint": "eslint ./ --ext .js,.ts,.tsx --fix",
     "test": "npm run build:test && cross-env NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha -- ./test",
@@ -74,12 +74,12 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "1.7.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^9.2.1",
-    "rollup-plugin-dts": "^1.1.5",
-    "rollup-plugin-license": "^0.8.1",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-uglify": "^6.0.2",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-dts": "1.1.5",
+    "rollup-plugin-license": "2.3.0",
+    "rollup-plugin-node-resolve": "4.2.4",
+    "rollup-plugin-uglify": "6.0.4",
     "typescript": "^3.5.3"
   },
   "config": {
@@ -89,7 +89,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "git rev-parse -q --no-revs --verify MERGE_HEAD || lint-staged"
     }
   },
   "lint-staged": {

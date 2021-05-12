@@ -69,11 +69,11 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rollup": "1.7.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^9.2.1",
-    "rollup-plugin-license": "^0.8.1",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-uglify": "^6.0.2"
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-license": "2.3.0",
+    "rollup-plugin-node-resolve": "4.2.4",
+    "rollup-plugin-uglify": "6.0.4"
   },
   "config": {
     "commitizen": {
@@ -82,7 +82,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "git rev-parse -q --no-revs --verify MERGE_HEAD || lint-staged"
     }
   },
   "lint-staged": {
