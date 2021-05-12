@@ -16,7 +16,10 @@
     "eslint": "eslint ./ --ext .vue,.js,.ts --fix",
     "test": "cross-env BABEL_ENV=test karma start --single-run",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepublishOnly": "npm run build && npm run eslint",
+    "release": "npm publish",
+    "release:alpha": "npm publish --tag alpha"
   },
   "repository": {
     "type": "git",
