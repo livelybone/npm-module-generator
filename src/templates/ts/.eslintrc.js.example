@@ -18,7 +18,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     '@typescript-eslint/no-unused-vars': 1,
     'prettier/prettier': 2,
-    'no-console': [2, { allow: ["warn", "error"] }],
+    'no-console': [2, { allow: ['info', 'warn', 'error'] }],
     'no-shadow': 2,
     'import/extensions': [
       2,

@@ -65,7 +65,7 @@ export default isWatch
     },
     {
       name: 'index',
-      filename: './src/index.ts',
+      filename: './src/index.js',
       formats: ['umd'],
       needUglify: true,
       external: false,
